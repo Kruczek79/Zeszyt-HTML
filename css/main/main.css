@@ -243,6 +243,8 @@ body {
 	align-items: center;
 	transition: all 0.6s ease;
 	margin-bottom: 30px;
+	position: sticky;
+	top: 0;
 }
 .topbar div {
 	width: 18px;
