@@ -52,7 +52,7 @@ button.addEventListener("click", (event) => {
 		}
 	} else {
 		console.log("pesel: niegut");
-		dane.innerHTML = "";
+		dane.innerHTML = "Niepoprawny pesel. Sproboj wpisac jeszcze raz";
 	}
 });
 
