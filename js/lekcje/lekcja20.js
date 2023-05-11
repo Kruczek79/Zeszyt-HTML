@@ -25,7 +25,7 @@ function draw() {
 		}
 	}
 }
-function Image1(which) {
+function dImage(which) {
 	if (which == 3) {
 		ctx.drawImage(rook, 0, 110);
 		ctx.drawImage(queen, 110, 110);
@@ -37,30 +37,37 @@ function Image1(which) {
 }
 rook.addEventListener("load", () => {
 	draw();
-	Image1(3);
+	dImage(3);
 });
 king.addEventListener("load", () => {
 	draw();
-	Image1(3);
+	dImage(3);
 });
 queen.addEventListener("load", () => {
 	draw();
-	Image1(3);
+	dImage(3);
 });
 document.querySelector(".btn").addEventListener("click", function animate() {
 	let y = 100;
-	let id = setInterval(() => {
-		y = y - 20;
-		console.log(y);
+	const write = function () {
+		alert("checkmate");
+	};
+	const fly = function (callback) {
+		let id = setInterval(() => {
+			y = y - 20;
+			console.log(y);
 
-		ctx.clearRect(0, 0, canvas.width, canvas.height);
-		draw();
-		ctx.drawImage(queen, 110, y);
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+			draw();
+			ctx.drawImage(queen, 110, y);
 
-		Image1(2);
+			dImage(2);
 
-		if (y <= 5) {
-			clearInterval(id);
-		}
-	}, 100);
+			if (y <= 5) {
+				clearInterval(id);
+				callback();
+			}
+		}, 100);
+	};
+	fly(write);
 });
