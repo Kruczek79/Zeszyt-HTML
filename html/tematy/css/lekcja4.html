@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pl-pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS lekcja 4</title>
+    <link rel="icon" href="../../../img/icon.png" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../../css/main/main.css">
+    <link rel="stylesheet" href="../../../css/main/podst/tematy.css">
+    <link rel="stylesheet" href="../../../css/main/icons/css/boxicons.min.css">
+    <!-- SCRIPTS -->
+    <script src="../../../js/main/jquery.js"></script>
+    <script defer src="../../../js/main/highlight.js"></script>
+    <script defer src="../../../js/main/main.js"></script>
+
+</head>
+
+<body class="dark">
+
+    <div id="container">
+        <div class="header"></div>
+
+        <div class="sidebar">
+            <div class="logo-content">
+                <div class="logo">Zeszyt HTML</div>
+            </div>
+            <i class='bx bx-menu' id="btn"></i>
+
+            <ul class="nav-list">
+                <li>
+                    <a href="../../../index.html">
+                        <i class='bx bxs-grid-alt'></i>
+                        <span class="link-name">Home</span>
+                    </a>
+                    <span class="tooltip">Home</span>
+                </li>
+                <li>
+                    <a href="../../Jezyki.html">
+                        <i class='bx bx-code-alt'></i>
+                        <span class="link-name">Jezyki Progr</span>
+                    </a>
+                    <span class="tooltip">Jezyki Progr</span>
+                </li>
+                <li>
+                    <a href="../../tematy.html">
+                        <i class='bx bxs-book'></i>
+                        <span class="link-name">Tematy</span>
+                    </a>
+                    <span class="tooltip">Tematy</span>
+                </li>
+                <li>
+                    <a href="../../plan.html">
+                        <i class='bx bx-calendar'></i>
+                        <span class="link-name">Plan Lekcji</span>
+                    </a>
+                    <span class="tooltip">Plan Lekcji</span>
+                </li>
+                <li class="mode">
+                    <div class="ms">
+                        <i class="bx bx-moon"></i>
+                    </div>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="topbar">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="note">
+                <h3 class="title">Temat: FlexBox</h3>
+                <span class="line"></span>
+                <ol>
+                    <li>
+                        <h3>FlexBox co to</h3> <br>
+                        <span> FlexBox to sposob rozmieszczania elementow na stronie. <br> Aby uzyc flex boxa trzeba
+                            stworzyc
+                            element, <br>
+                            ktory bedzie posiadal wlasciwosc display:flex;<br> Nastepnie uzywamy innych wlasciwosci
+                            flexBoxa
+                            do rozmieszczenia elementow.</span>
+
+                    </li>
+                    <li>
+                        <h3>Jak uzyc flex boxa</h3>
+                        <ol>
+                            <li class="letter">
+                                <h4>Display: flex</h4> <br>
+                                <span> Nadajemy elementowi flexboxa.</span>
+                                <pre>
+                                    <code class="language-css">div.container{
+    display:flex;
+}</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>Flex-direction</h4> <br>
+                                <span> Flex box posiada 2 kierunki podstawowy i poboczny. <br>Domyslnie kierunek
+                                    podstawowy to
+                                    row
+                                    <br>
+                                    tzn ze
+                                    elementy we flexboxie beda ustawiac sie w rzedzie, <br> a gdy jest column to
+                                    elementy
+                                    beda
+                                    ustawiac sie pod soba, <br>
+                                    Mozna takze uzyc row-reverse lub column-reverse co ulozy nam elementy na odwrot do
+                                    kierunku</span>
+                                <pre>
+                                    <code class="language-css">div.container{
+    display:flex;
+    flex-direction:row/column;                                      
+}</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>Justify Content</h4> <br>
+                                <span> Justify content ustawia nam elementy wzgledem podstawowego kierunku flex
+                                    (domyslnie row)
+                                    <br>
+                                    Przyjmuje wartosci center, flex-start,flex-end,space-around,space-between</span>
+                                <pre>
+                                    <code class="language-css">div.container{
+    display:flex;
+    /*center(srodek), flex-start(na poczatku elementu flex), */
+    /*flex-end(na koncu elementu flex),space-around(odstep do okola),*/
+    /*space-between(odstep miedzy elementami)*/
+    justify-content: center;
+}</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>Align Items</h4> <br>
+                                <span> Align Items ustawia nam elementy wzgledem dodatkowego kierunku flex (domyslnie
+                                    column)
+                                    <br>
+                                    Przyjmuje wartosci center, flex-start,flex-end,space-around,space-between</span>
+                                <pre>
+                                    <code class="language-css">div.container{
+    display:flex;
+    /*center(srodek), flex-start(na poczatku elementu flex), */
+    /*flex-end(na koncu elementu flex),space-around(odstep do okola),*/
+    /*space-between(odstep miedzy elementami)*/
+    align-items:center;
+}</code>
+</pre>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- loader -->
+        <div class="loader">
+            <div class="circles">
+                <div></div>
+                <div></div>
+                <div></div>
+                <span></span>
+            </div>
+        </div>
+</body>
+
+</html>

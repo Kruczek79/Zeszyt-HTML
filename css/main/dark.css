@@ -1,0 +1,100 @@
+body.dark .switch {
+	background-color: #25273c;
+	transition: all 0.5s ease;
+}
+body.dark .switch::before {
+	left: 20px;
+	background-color: #919191;
+	transition: all 0.5s ease;
+}
+
+body.dark {
+	background: #323232;
+	transition: all 0.5s ease;
+}
+body.dark .header {
+	background: #26283e;
+	transition: all 0.5s ease;
+}
+body.dark .sidebar {
+	background: #383b5c;
+}
+body.dark .sidebar ul li a .link-name {
+	color: #fff;
+	transition: all 0.5s ease;
+}
+body.dark .sidebar ul li a i {
+	color: #fff;
+	transition: all 0.5s ease;
+}
+body.dark #btn {
+	color: #fff;
+	transition: all 0.5s ease;
+}
+body.dark .logo {
+	transition: all 0.5s ease;
+	color: #fff;
+}
+body.dark .ms i {
+	color: #fff;
+	transition: all 0.5s ease;
+}
+body.dark .content {
+	background: #444958;
+}
+body.dark .topbar {
+	background-color: #363942;
+}
+body.dark ul li a:hover {
+	background-color: #fff;
+}
+body.dark ul li a:hover i {
+	color: #000;
+}
+body.dark ul li a:hover .link-name {
+	color: #000;
+}
+body.dark .content {
+	color: #ffffff;
+}
+body.dark .html li:hover a {
+	color: #000;
+	transition: all 0.5s ease;
+}
+
+body.dark .html li:hover {
+	background-color: #ee8a08;
+	cursor: pointer;
+	transition: all 0.5s ease;
+	color: #000;
+}
+body.dark .css li:hover {
+	background-color: #08a5ee;
+	cursor: pointer;
+	transition: all 0.5s ease;
+	color: #000;
+}
+body.dark .js li:hover {
+	background-color: #a6ab04;
+	transition: all 0.5s ease;
+	cursor: pointer;
+	color: #000;
+}
+body.dark .css li:hover a {
+	color: #000;
+	transition: all 0.5s ease;
+}
+body.dark .js li:hover a {
+	color: #000;
+	transition: all 0.5s ease;
+}
+body.dark .sql li:hover {
+	background-color: #e31c1c;
+	transition: all 0.5s ease;
+	cursor: pointer;
+	color: #000;
+}
+body.dark .sql li:hover a {
+	color: #000;
+	transition: all 0.5s ease;
+}

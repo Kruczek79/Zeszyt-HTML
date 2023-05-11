@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pl-pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS lekcja 2</title>
+    <link rel="icon" href="../../../img/icon.png" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../../css/main/main.css">
+    <link rel="stylesheet" href="../../../css/lekcje/css/lekcja2.css">
+    <link rel="stylesheet" href="../../../css/main/podst/tematy.css">
+    <link rel="stylesheet" href="../../../css/main/icons/css/boxicons.min.css">
+    <!-- SCRIPTS -->
+    <script src="../../../js/main/jquery.js"></script>
+    <script defer src="../../../js/main/highlight.js"></script>
+    <script defer src="../../../js/main/main.js"></script>
+
+</head>
+
+<body class="dark">
+
+    <div id="container">
+        <div class="header"></div>
+
+        <div class="sidebar">
+            <div class="logo-content">
+                <div class="logo">Zeszyt HTML</div>
+            </div>
+            <i class='bx bx-menu' id="btn"></i>
+
+            <ul class="nav-list">
+                <li>
+                    <a href="../../../index.html">
+                        <i class='bx bxs-grid-alt'></i>
+                        <span class="link-name">Home</span>
+                    </a>
+                    <span class="tooltip">Home</span>
+                </li>
+                <li>
+                    <a href="../../Jezyki.html">
+                        <i class='bx bx-code-alt'></i>
+                        <span class="link-name">Jezyki Progr</span>
+                    </a>
+                    <span class="tooltip">Jezyki Progr</span>
+                </li>
+                <li>
+                    <a href="../../tematy.html">
+                        <i class='bx bxs-book'></i>
+                        <span class="link-name">Tematy</span>
+                    </a>
+                    <span class="tooltip">Tematy</span>
+                </li>
+                <li>
+                    <a href="../../plan.html">
+                        <i class='bx bx-calendar'></i>
+                        <span class="link-name">Plan Lekcji</span>
+                    </a>
+                    <span class="tooltip">Plan Lekcji</span>
+                </li>
+                <li class="mode">
+                    <div class="ms">
+                        <i class="bx bx-moon"></i>
+                    </div>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="topbar">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="note">
+                <h3 class="title">Temat: CSS - kolory</h3>
+                <span class="line"></span>
+                <ol>
+                    <li>
+                        <h3>Kolory</h3> <br>
+                        <span> W cssie kolory ustawiamy na 3 sposoby:</span>
+                        <ol>
+                            <li class="letter">
+                                <h4>RGB</h4> <br>
+                                <span> Ustawiamy wartosci dla koloru <div class="wrapper"> <span class="redtxt">R
+                                            (czerwony)</span>
+                                        <span class="greentxt"> G (zielony)</span> <span class="bluetxt"> B
+                                            (niebieski)</span> od
+                                        0
+                                        -
+                                        255
+                                    </div>
+                                </span>
+                                <pre>
+                                    <code class="language-css">p{
+    color: rgb(255, 0, 0);
+}</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>Hex</h4> <br>
+                                <span> Ustawiamy hexadecymalny(szestnastkowy) kod koloru poprzedzany przez "#" <br> od
+                                    0-1
+                                    i od A-F gdzie fff to bialy a <span class="blacktxt">000 to czarny</span></span>
+                                <pre>
+                                    <code class="language-css">p{
+    color: #ff0000;
+}</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>Nazwa koloru</h4> <br>
+                                <span> Nazwa koloru po angielsku np:. red </span><br>
+                                <pre>
+                                    <code class="language-css">p{
+    color: red;
+}</code>
+</pre>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <h3>Background-color i Color</h3> <br>
+                        <span> W CSS mozemy ustawiac kolor tekstu i kolor tla za pom:</span>
+                        <ol>
+                            <li class="letter">
+                                <h4>Background-color</h4> <br>
+                                <span> Ustawia to kolor tla za elementem</span>
+                                <pre>
+                                    <code class="language-css">p{
+    background-color: red;
+}</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>Color</h4> <br>
+                                <span> Ustawia to kolor tekstu w elemencie</span>
+                                <pre>
+                                    <code class="language-css">p{
+    color: red;
+}</code>
+</pre>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <h3>Tabelka z przykladowymi kolorami</h3> <br>
+                        <table>
+                            <tr>
+                                <th>Kolor</th>
+                                <th>Hex</th>
+                                <th>RGB</th>
+                                <th>Text</th>
+                            </tr>
+                            <tr>
+                                <td class="red"></td>
+                                <td>#FF0000</td>
+                                <td>RGB(255, 0 ,0)</td>
+                                <td>red</td>
+                            </tr>
+                            <tr>
+                                <td class="green"></td>
+                                <td>#00FF00</td>
+                                <td>RGB(0, 255 ,0)</td>
+                                <td>green</td>
+                            </tr>
+                            <tr>
+                                <td class="blue"></td>
+                                <td>#0000FF</td>
+                                <td>RGB(0, 0 ,255)</td>
+                                <td>blue</td>
+                            </tr>
+                        </table>
+                    </li>
+                </ol>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- loader -->
+    <div class="loader">
+        <div class="circles">
+            <div></div>
+            <div></div>
+            <div></div>
+            <span></span>
+        </div>
+    </div>
+</body>
+
+</html>

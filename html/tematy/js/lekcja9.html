@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pl-pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS lekcja 9</title>
+    <link rel="icon" href="../../../img/icon.png" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../../css/main/main.css">
+    <link rel="stylesheet" href="../../../css/main/icons/css/boxicons.min.css">
+    <link rel="stylesheet" href="../../../css/main/podst/tematy.css">
+    <link rel="stylesheet" href="../../../css/lekcje/js/lekcja9.css">
+    <!-- SCRIPTS -->
+    <script defer src="../../../js/main/jquery.js"></script>
+    <script defer src="../../../js/main/highlight.js"></script>
+    <script defer src="../../../js/main/main.js"></script>
+
+</head>
+
+<body class="dark">
+
+    <div id="container">
+        <div class="header"></div>
+
+        <div class="sidebar">
+            <div class="logo-content">
+                <div class="logo">Zeszyt HTML</div>
+            </div>
+            <i class='bx bx-menu' id="btn"></i>
+
+            <ul class="nav-list">
+                <li>
+                    <a href="../../../index.html">
+                        <i class='bx bxs-grid-alt'></i>
+                        <span class="link-name">Home</span>
+                    </a>
+                    <span class="tooltip">Home</span>
+                </li>
+                <li>
+                    <a href="../../Jezyki.html">
+                        <i class='bx bx-code-alt'></i>
+                        <span class="link-name">Jezyki Progr</span>
+                    </a>
+                    <span class="tooltip">Jezyki Progr</span>
+                </li>
+                <li>
+                    <a href="../../tematy.html">
+                        <i class='bx bxs-book'></i>
+                        <span class="link-name">Tematy</span>
+                    </a>
+                    <span class="tooltip">Tematy</span>
+                </li>
+                <li>
+                    <a href="../../plan.html">
+                        <i class='bx bx-calendar'></i>
+                        <span class="link-name">Plan Lekcji</span>
+                    </a>
+                    <span class="tooltip">Plan Lekcji</span>
+                </li>
+                <li class="mode">
+                    <div class="ms">
+                        <i class="bx bx-moon"></i>
+                    </div>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="topbar">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="note">
+                <h3 class="title">Temat: DOM HTML</h3>
+                <span class="line"></span>
+                <ol>
+                    <li>
+                        <h3>Co to DOM</h3> <br>
+                        <span>DOM (Document Object Model) jest to drzewo reprezentujace <br> zaleznosci(hierarchie)
+                            miedzy
+                            elementami html</span> <br>
+                        <img src="../../../img/lekcje/js/dom.png" id="img">
+                    </li>
+                    <li>
+                        <h3>Pobieranie elementow w DOMIE</h3> <br>
+                        <span>Pobrac element w js mozna na kilka roznych sposobow. <br> Robimy to poto aby manipulowac
+                            elementem od strony javascriptu. Oto one:</span>
+                        <ol>
+                            <li class="letter">
+                                <h4>getElementById</h4>
+                                <span>Pobiera element za pomoca id</span>
+                                <pre><code class="language-javascript">document.getElementById("id")
+</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>querySelector</h4>
+                                <span>Pobiera element za pomoca id lub klasy</span>
+                                <pre><code class="language-javascript">document.querySelector("#id") //pobiera za pom id
+document.querySelector(".klasa") //pobiera za pom klasy                                    
+</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>querySelectorAll</h4>
+                                <span>Pobiera wszystkie elementy od danym id lub klasie. <br>Zwraca w postaci tablicy
+                                    elementow</span>
+                                <pre><code class="language-javascript">document.querySelectorAll(".id"); //pobiera za pom id
+document.querySelectorAll(".class"); //pobiera za pom klasy
+document.querySelectorAll(.class)[0]; //pierwszy element klasy "class"
+</code>
+</pre>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <h3>Manipulacja elementami w DOMie</h3>
+                        <ol>
+                            <li class="letter">
+                                <h4>innerHTML</h4>
+                                <span>Zmienia wewnetrzny html elementu</span>
+                                <pre><code class="language-javascript">document.querySelector("#id").innerHTML = "wewnetrzny html elementu";
+</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>textContent</h4>
+                                <span>Zmienia tekst elementu</span>
+                                <pre><code class="language-javascript">document.querySelector("#id").textContent = "wewnetrzny tekst";
+</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>style</h4>
+                                <span>Zmienia styl elementu w css</span>
+                                <pre><code class="language-javascript">document.querySelector("#id").style.color = "red"; //kolor tekstu czerwony
+</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>setAttribute</h4>
+                                <span>Ustawia Atrybut html na elemencie</span>
+                                <pre><code class="language-javascript">document.querySelector("#id").setAttribute("id", "btn"); //ustawia atrybut html id na "btn"
+</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>createElement</h4>
+                                <span>Tworzy element html</span>
+                                <pre><code class="language-javascript">let div = document.createElement("div"); //tworzy element
+</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>appendChild</h4>
+                                <span>Dodaje element do potomka elementu</span>
+                                <pre><code class="language-javascript">let div = document.createElement("div"); //tworzy element
+document.querySelector(".content").appendChild(div); //dodaje diva do elementu .content jako potomek
+</code>
+</pre>
+                                <pre><code class="language-html">&lt;div class="content"&gt;
+    &lt;div&gt;&lt;/div&gt; &lt;!--to jest ten div utworzony i jest on potomkiem diva .content --&gt;
+&lt;/div&gt;
+</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>removeChild</h4>
+                                <span>Usuwa element potomek elementu</span>
+                                <pre><code class="language-javascript">let div = document.createElement("div"); //tworzy element
+document.querySelector(".content").removeChild(div); //usuwa diva z elementu .content
+</code>
+</pre>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- loader -->
+    <div class="loader">
+        <div class="circles">
+            <div></div>
+            <div></div>
+            <div></div>
+            <span></span>
+        </div>
+    </div>
+</body>
+
+</html>

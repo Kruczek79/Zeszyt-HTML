@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pl-pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS lekcja 3</title>
+    <link rel="icon" href="../../../img/icon.png" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../../css/main/main.css">
+    <link rel="stylesheet" href="../../../css/main/podst/tematy.css">
+    <link rel="stylesheet" href="../../../css/main/icons/css/boxicons.min.css">
+    <link rel="stylesheet" href="../../../css/lekcje/css/lekcja3.css">
+    <!-- SCRIPTS -->
+    <script src="../../../js/main/jquery.js"></script>
+    <script defer src="../../../js/main/highlight.js"></script>
+    <script defer src="../../../js/main/main.js"></script>
+
+</head>
+
+<body class="dark">
+
+    <div id="container">
+        <div class="header"></div>
+
+        <div class="sidebar">
+            <div class="logo-content">
+                <div class="logo">Zeszyt HTML</div>
+            </div>
+            <i class='bx bx-menu' id="btn"></i>
+
+            <ul class="nav-list">
+                <li>
+                    <a href="../../../index.html">
+                        <i class='bx bxs-grid-alt'></i>
+                        <span class="link-name">Home</span>
+                    </a>
+                    <span class="tooltip">Home</span>
+                </li>
+                <li>
+                    <a href="../../Jezyki.html">
+                        <i class='bx bx-code-alt'></i>
+                        <span class="link-name">Jezyki Progr</span>
+                    </a>
+                    <span class="tooltip">Jezyki Progr</span>
+                </li>
+                <li>
+                    <a href="../../tematy.html">
+                        <i class='bx bxs-book'></i>
+                        <span class="link-name">Tematy</span>
+                    </a>
+                    <span class="tooltip">Tematy</span>
+                </li>
+                <li>
+                    <a href="../../plan.html">
+                        <i class='bx bx-calendar'></i>
+                        <span class="link-name">Plan Lekcji</span>
+                    </a>
+                    <span class="tooltip">Plan Lekcji</span>
+                </li>
+                <li class="mode">
+                    <div class="ms">
+                        <i class="bx bx-moon"></i>
+                    </div>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="topbar">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="note">
+                <h3 class="title">Temat: Box Model</h3>
+                <span class="line"></span>
+                <ol>
+                    <li>
+                        <h3>Co to box model?</h3> <br>
+                        <span> Box model to margines, padding, obramowanie ktore dziala razem ze soba tworzac
+                            element</span>
+
+                    </li>
+                    <li>
+                        <h3>Elementy Box modelu CSS</h3>
+                        <ol>
+                            <li class="letter">
+                                <h4>Margin - margines</h4> <br>
+                                <span> Aby ustawic margines dla elementu ustawiamy wlasciwosc margin-strona: wartosc
+                                </span>
+                                <pre>
+                                    <code class="language-css">p.margin{
+    /*top - gora, bottom - dol*/
+    /*right - prawo, left - lewo*/
+    margin:2px;
+    margin-left:20px;
+}</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>Padding</h4> <br>
+                                <span> Padding rozszerza nam element w kazda strone<br>
+                                    Aby
+                                    nadac
+                                    padding uzywamy padding-strona: wartosc </span>
+                                <pre>
+                                    <code class="language-css">p.padding{
+    /*top - gora, bottom - dol*/
+    /*right - prawo, left - lewo*/
+    padding:2px;
+    padding-top:20px;
+}</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>Border - obramowanie</h4> <br>
+                                <span> Obramowanie obramowuje nam element na dany kolor<br> Aby
+                                    nadac
+                                    obramowanie uzywamy border-strona: wielkosc rodzaj kolor</span>
+                                <pre>
+                                    <code class="language-css">p.border{
+    /*top - gora, bottom - dol*/
+    /*right - prawo, left - lewo*/
+    border:2px solid black;
+    border-right:2px solid black;
+}</code>
+</pre>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <h3>Rodzaje obramowania</h3>
+                        <ol>
+                            <li class="letter">
+                                <h4>Solid</h4><br>
+                                <span>Podstawowe obramowanie nie przerywane</span>
+                                <p class="solid">Lorem, ipsum.</p>
+                                <pre>
+                                    <code class="language-css">p.solid{
+    border:2px solid #fffffff;            
+}
+</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>Dashed</h4><br>
+                                <span>Przerywane obramowanie malymi liniami</span>
+                                <p class="dashed">Lorem, ipsum.</p>
+                                <pre>
+                                    <code class="language-css">p.dashed{
+    border:2px dashed #fffffff;            
+}
+</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>Dotted</h4> <br>
+                                <span>Przerywane obramowanie kropkami</span>
+                                <p class="dotted">Lorem, ipsum.</p>
+                                <pre>
+                                    <code class="language-css">p.dotted{
+    border:2px dotted #fffffff;            
+}
+</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>Double</h4> <br>
+                                <span>Podwojne obramowanie</span>
+                                <p class="double">Lorem, ipsum.</p>
+                                <pre>
+                                    <code class="language-css">p.double{
+    border:2px double #fffffff;            
+}
+</code>
+</pre>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- loader -->
+        <div class="loader">
+            <div class="circles">
+                <div></div>
+                <div></div>
+                <div></div>
+                <span></span>
+            </div>
+        </div>
+</body>
+
+</html>

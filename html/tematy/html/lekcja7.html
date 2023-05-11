@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pl-pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML lekcja 7</title>
+    <link rel="icon" href="../../../img/icon.png" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../../css/main/main.css">
+    <link rel="stylesheet" href="../../../css/main/icons/css/boxicons.min.css">
+    <link rel="stylesheet" href="../../../css/main/podst/tematy.css">
+    <!-- SCRIPTS -->
+    <script src="../../../js/main/jquery.js"></script>
+    <script defer src="../../../js/main/highlight.js"></script>
+    <script defer src="../../../js/main/main.js"></script>
+
+</head>
+
+<body class="dark">
+
+    <div id="container">
+        <div class="header"></div>
+
+        <div class="sidebar">
+            <div class="logo-content">
+                <div class="logo">Zeszyt HTML</div>
+            </div>
+            <i class='bx bx-menu' id="btn"></i>
+
+            <ul class="nav-list">
+                <li>
+                    <a href="../../../index.html">
+                        <i class='bx bxs-grid-alt'></i>
+                        <span class="link-name">Home</span>
+                    </a>
+                    <span class="tooltip">Home</span>
+                </li>
+                <li>
+                    <a href="../../Jezyki.html">
+                        <i class='bx bx-code-alt'></i>
+                        <span class="link-name">Jezyki Progr</span>
+                    </a>
+                    <span class="tooltip">Jezyki Progr</span>
+                </li>
+                <li>
+                    <a href="../../tematy.html">
+                        <i class='bx bxs-book'></i>
+                        <span class="link-name">Tematy</span>
+                    </a>
+                    <span class="tooltip">Tematy</span>
+                </li>
+                <li>
+                    <a href="../../plan.html">
+                        <i class='bx bx-calendar'></i>
+                        <span class="link-name">Plan Lekcji</span>
+                    </a>
+                    <span class="tooltip">Plan Lekcji</span>
+                </li>
+                <li class="mode">
+                    <div class="ms">
+                        <i class="bx bx-moon"></i>
+                    </div>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="topbar">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="note">
+                <h3 class="title">Temat: Tabele</h3>
+                <span class="line"></span>
+                <ol>
+                    <li>
+                        <h3>Tworzenie tabeli</h3> <br> <br>
+                        <ol>
+                            <li class="letter">Znacznik "table" <br>
+                                <span> Tworzenie tabeli odbywa sie za pom znacznika "table" <br> ktory mozemy potem
+                                    rozszerzyc
+                                    o
+                                    inne znaczniki tabeli lub mozemy dodac atrybuty</span> <br>
+                                <pre>
+                                    <code class="language-html">&lt;table&gt;&lt;/table&gt;</code>
+                                </pre>
+                            </li>
+                            <li class="letter">
+                                <h4> Atrybuty znacznika "table" i innych znacznikow tabeli</h4><br>
+                                <ul>
+                                    <li>
+                                        <h4>Border - obramowanie tabeli</h4>
+                                        <pre>
+                                            <code class="language-html">&lt;table border="1px"&gt;&lt;/table&gt;</code>
+                                        </pre>
+                                    </li>
+                                    <li>
+                                        <h4> BorderCollapse - podwojne obramowanie (CSS)</h4><br>
+                                        <span>Gdy domyslnie tworzymy tabele to tabela oraz komorki beda miec oddzielne
+                                            obramowanie, <br> i bedzie wygladac jakby bylo podwojne, <br> aby tego
+                                            uniknac
+                                            ustawiamy
+                                            border-collapse:collapse;</span>
+                                        <pre>
+                                            <code class="language-html">&lt;table style="border-collapse:collapse;"&gt;&lt;/table&gt;</code>
+                                        </pre>
+                                    </li>
+                                    <li>
+                                        <h4>Colspan - zwiekszenie szerokosci komórki wzgledem innych </h4><br><span>(np
+                                            wartosc
+                                            2 daje
+                                            szerokosc dwoch normalnych komorek w tabeli)</span>
+                                        <pre>
+                                            <code class="language-html">&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td colspan="2"&gt;&lt;/td&gt;
+    &lt;/tr&gt;                                               
+&lt;/table&gt;</code>
+</pre>
+                                    </li>
+                                    <li>
+                                        <h4>Rowspan - zwiekszenie wysokosci komórki wzgledem innych </h4><br><span>(np
+                                            wartosc 2
+                                            daje
+                                            szerokosc dwoch normalnych komorek w tabeli)</span>
+                                        <pre>
+                                            <code class="language-html">&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td rowspan="2"&gt;&lt;/td&gt;
+    &lt;/tr&gt;                                               
+&lt;/table&gt;</code>
+</pre>
+                                    </li>
+                                </ul>
+                            </li>
+
+                        </ol>
+                    </li>
+                    <li>
+                        <h3>Znaczniki tabeli</h3> <br> <br>
+                        <ol>
+                            <li class="letter">
+                                <h4>TR - rząd komórek tabeli</h4> <br>
+                                <pre>
+                                    <code class="language-html">&lt;table&gt;
+    &lt;tr&gt;
+       &lt;!--komórki tabeli--&gt;
+    &lt;/tr&gt;                                               
+&lt;/table&gt;</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>TH - naglowek tabeli</h4> <br>
+                                <pre>
+                                    <code class="language-html">&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Zawartosc naglowka&lt;/th&gt;
+    &lt;/tr&gt;                                               
+&lt;/table&gt;</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>TD - komorka tabeli</h4> <br>
+                                <pre>
+                                    <code class="language-html">&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td&gt;zawartosc komórki&lt;/td&gt;
+    &lt;/tr&gt;                                               
+&lt;/table&gt;</code>
+</pre>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- loader -->
+    <div class="loader">
+        <div class="circles">
+            <div></div>
+            <div></div>
+            <div></div>
+            <span></span>
+        </div>
+    </div>
+</body>
+
+</html>

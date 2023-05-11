@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pl-pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS lekcja 4</title>
+    <link rel="icon" href="../../../img/icon.png" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../../css/main/main.css">
+    <link rel="stylesheet" href="../../../css/main/icons/css/boxicons.min.css">
+    <link rel="stylesheet" href="../../../css/main/podst/tematy.css">
+    <link rel="stylesheet" href="../../../css/lekcje/js/lekcja4.css">
+    <!-- SCRIPTS -->
+    <script defer src="../../../js/main/jquery.js"></script>
+    <script defer src="../../../js/main/highlight.js"></script>
+    <script defer src="../../../js/main/main.js"></script>
+    <script defer src="../../../js/lekcje/lekcja4.js"></script>
+
+</head>
+
+<body class="dark">
+
+    <div id="container">
+        <div class="header"></div>
+
+        <div class="sidebar">
+            <div class="logo-content">
+                <div class="logo">Zeszyt HTML</div>
+            </div>
+            <i class='bx bx-menu' id="btn"></i>
+
+            <ul class="nav-list">
+                <li>
+                    <a href="../../../index.html">
+                        <i class='bx bxs-grid-alt'></i>
+                        <span class="link-name">Home</span>
+                    </a>
+                    <span class="tooltip">Home</span>
+                </li>
+                <li>
+                    <a href="../../Jezyki.html">
+                        <i class='bx bx-code-alt'></i>
+                        <span class="link-name">Jezyki Progr</span>
+                    </a>
+                    <span class="tooltip">Jezyki Progr</span>
+                </li>
+                <li>
+                    <a href="../../tematy.html">
+                        <i class='bx bxs-book'></i>
+                        <span class="link-name">Tematy</span>
+                    </a>
+                    <span class="tooltip">Tematy</span>
+                </li>
+                <li>
+                    <a href="../../plan.html">
+                        <i class='bx bx-calendar'></i>
+                        <span class="link-name">Plan Lekcji</span>
+                    </a>
+                    <span class="tooltip">Plan Lekcji</span>
+                </li>
+                <li class="mode">
+                    <div class="ms">
+                        <i class="bx bx-moon"></i>
+                    </div>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="topbar">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="note">
+                <h3 class="title">Temat: Petle JS</h3>
+                <span class="line"></span>
+                <ol>
+                    <li>
+                        <h3>Co to petle?</h3> <br>
+                        <span>Petla to konstrukcja umozliwiajaca cykliczne wykonywanie ciagu instrukcji okreslona liczbe
+                            razy. <br>Wyrozniamy 3 rodzaje petli:.</span>
+                        <ol>
+                            <li class="letter">
+                                <h4>Petla While</h4> <br>
+                                <span>Wykonuje sie dopoki warunek jest prawdziwy</span>
+                                <pre><code class="language-javascript">while(warunek){
+    //operacje
+}</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>Petla For</h4> <br>
+                                <span>Wykonuje sie dopoki iterator(zmienna petli) nie przekroczy jakies wartosci</span>
+                                <pre><code class="language-javascript">//i = iterator, i=0 poczatkowa wartosc, i++ zwiekszanie iteracji petli
+//petla wykona sie od 0 do 10 (9razy)
+for(let i=0;i>10;i++){
+    //operacje
+}</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>Set Interval</h4> <br>
+                                <span>Wykonuje sie w nieskonczonosc (mozna ja zatrzymac) co odstep czasu podany w
+                                    argumencie</span>
+                                <pre><code class="language-javascript">let id = setInterval(() => {
+    //iterator petli
+    let i = 0;
+    //jezeli i bedzie wieksze od 10 zastopuj petle
+    if(i > 10){
+        clearInterval(id)//stop petli
+    }
+}, argument);//interwal co ile czasu ma sie wykonywac petla</code>
+</pre>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <h3>Przyklad uzycia petli</h3> <br>
+                        <input type="text" id="height" class="input">
+                        <input type="submit" class="btn">
+                        <div id="tree"></div>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- loader -->
+    <div class="loader">
+        <div class="circles">
+            <div></div>
+            <div></div>
+            <div></div>
+            <span></span>
+        </div>
+    </div>
+</body>
+
+</html>

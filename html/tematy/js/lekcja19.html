@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pl-pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS lekcja 19</title>
+    <link rel="icon" href="../../../img/icon.png" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../../css/main/main.css">
+    <link rel="stylesheet" href="../../../css/main/icons/css/boxicons.min.css">
+    <link rel="stylesheet" href="../../../css/main/podst/tematy.css">
+    <!-- SCRIPTS -->
+    <script defer src="../../../js/main/jquery.js"></script>
+    <script defer src="../../../js/main/highlight.js"></script>
+    <script defer src="../../../js/main/main.js"></script>
+
+</head>
+
+<body class="dark">
+
+    <div id="container">
+        <div class="header"></div>
+
+        <div class="sidebar">
+            <div class="logo-content">
+                <div class="logo">Zeszyt HTML</div>
+            </div>
+            <i class='bx bx-menu' id="btn"></i>
+
+            <ul class="nav-list">
+                <li>
+                    <a href="../../../index.html">
+                        <i class='bx bxs-grid-alt'></i>
+                        <span class="link-name">Home</span>
+                    </a>
+                    <span class="tooltip">Home</span>
+                </li>
+                <li>
+                    <a href="../../Jezyki.html">
+                        <i class='bx bx-code-alt'></i>
+                        <span class="link-name">Jezyki Progr</span>
+                    </a>
+                    <span class="tooltip">Jezyki Progr</span>
+                </li>
+                <li>
+                    <a href="../../tematy.html">
+                        <i class='bx bxs-book'></i>
+                        <span class="link-name">Tematy</span>
+                    </a>
+                    <span class="tooltip">Tematy</span>
+                </li>
+                <li>
+                    <a href="../../plan.html">
+                        <i class='bx bx-calendar'></i>
+                        <span class="link-name">Plan Lekcji</span>
+                    </a>
+                    <span class="tooltip">Plan Lekcji</span>
+                </li>
+                <li class="mode">
+                    <div class="ms">
+                        <i class="bx bx-moon"></i>
+                    </div>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="topbar">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="note">
+                <h3 class="title">Temat: Obiektowy JS - OOP</h3>
+                <span class="line"></span>
+                <ol>
+                    <li>
+                        <h3>Co to sa paradygmaty programowania</h3> <br>
+                        <span>Paradygmaty programowania – to różne sposoby, w których dany program <br> lub język
+                            programowania może być zorganizowany. Każdy paradygmat składa się <br> z pewnych struktur,
+                            cech i
+                            opinii na temat tego, jak należy <br> rozwiązywać typowe problemy programistyczne.</span>
+                    </li>
+                    <li>
+                        <h3>Co to OOP</h3> <br>
+                        <span>
+                            Programowanie obiektowe (ang. OOP — Object Oriented Programming) to popularny paradygmat
+                            programowania, <br> w którym modelujemy istniejącą rzeczywistość za pomocą obiektów, zamiast
+                            stosować tylko funkcje i logikę. <br>
+                            Projektowanie obiektowe polega na umiejętności przedstawienia sytuacji z życia
+                            codziennego
+                            pod postacią <br> obiektów i relacji między nimi.
+                        </span>
+                    </li>
+                    <li>
+                        <h3>Klasa i Obiekty</h3> <br>
+                        <ol>
+                            <li class="letter">
+                                <h4>Obiekty</h4> <br>
+                                <span> Obiekt – wyodrębniony element rzeczywistości, element może być materialny <br>
+                                    lub
+                                    abstrakcyjny
+                                    Obiekt posiada wlasciwosci(pola) i funkcje(metody)
+                                </span>
+                                <pre><code class="language-javascript">//tworzenie obiektu
+const programista = {
+    kolorOczu: 'zielony',
+    jezykiProgramowania: ["js","c++","c#"],
+    programuj: function(){console.log("programuje");}
+}
+    
+</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>Klasy</h4> <br>
+                                <span> Klasa to przepis(pattern) na stworzenie obiektu. Kazdy obiekt klasy posiada
+                                    wlasciwosci <br> i metody danej klasy. Klasa rowniez posiada swoje wlasciwosci(pola)
+                                    i
+                                    funkcje(metody) <br> oraz posiada swoj konstrukor - czyli metoda wywolywana w
+                                    trakcie
+                                    stworzenia obiektu <br> jak i rowniez posiada pola statyczne - czyli takie ktore sa
+                                    przypisane do klasy(nie obiektu)
+                                </span>
+                                <pre><code class="language-javascript">//klasa programista
+class programista{
+//pola klasy
+    static liczbaProgramistow;
+    kolorOczu;
+    jezykiProgramowania;
+//metody klasy
+    programuj(){
+        console.log("programuje");
+    }
+//konstruktor
+    constructor(){
+        this.kolorOczu = "zielony"; //ustawianie wartosci na "zielony"
+        this.jezykiProgramowania = ["js","c++","c#"];
+    }
+}
+//tworzenie obiektu z klasy
+const obiekt = new programista();
+</code>
+</pre>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <h3>Wazne paradygmaty programowania obiektowego</h3>
+                        <ol>
+                            <li class="letter">
+                                <h4>Enkapsulacja</h4> <br>
+                                <span>Enkapsulacja to proces hermetyzacji pol i metod klasy aby <br> nikt nie mogl ich
+                                    zmienic przypadkiem. Uzywa sie do tego klauzul okreslajacych dostep:</span>
+                                <ol>
+                                    <li class="letter">
+                                        <h4>Private</h4> <br>
+                                        <span>Do prywatnych pol ma dostep jedynie klasa i tylko i wylacznie ona. <br>
+                                            Nazwy
+                                            pol i metod poprzedzamy znakiem "#"</span>
+                                        <pre>
+                                                <code class="language-javascript">class programista{
+    #prywatnePole;
+    #prywatnaMetoda(){
+        //kod
+    }
+}
+</code>
+</pre>
+                                    </li>
+                                    <li class="letter">
+                                        <h4>Public</h4> <br>
+                                        <span>Do publicznych pol ma dostep kazdy</span>
+                                        <pre>
+                                            <code class="language-javascript">class programista{
+normalnePole;
+normalnaMetoda(){
+    //kod
+}
+}
+</code>
+</pre>
+                                    </li>
+                                    <li class="letter">
+                                        <h4>Protected</h4> <br>
+                                        <span>Do protected ma dostep jedynie klasa oraz klasy dziedziczace z niej. <br>
+                                            Nazwy
+                                            pol i metod poprzedzamy znakiem "_"</span>
+                                        <pre>
+                                                <code class="language-javascript">class programista{
+    _protectedPole;
+    _protectedMetoda(){
+        //kod
+    }
+}
+</code>
+</pre>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li class="letter">
+                                <h4>Dziedziczenie</h4> <br>
+                                <span>Dziedziczenie jest mechanizmem, w którym można stworzyć nową klasę, <br> bazując
+                                    na już
+                                    istniejącej (nadrzędnej) klasie tzw. superklasie. <br> Klasa matka dzieli
+                                    zestaw
+                                    publicznych lub protected pol i metod z klasą
+                                    dziecka. <br>Dziedziczenie w JS okreslamy przed dodanie po nazwie klasy "extends" i
+                                    nazwe klasy z ktorej dziedziczy</span>
+                                <pre>
+                                        <code class="language-javascript">class programista extends Informatyk{
+}
+</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>Abstrakcja</h4> <br>
+                                <span>Klasa abstrakcyjna różni się od zwykłej klasy tym, <br> że nie można utworzyć jej
+                                    instancji. Może jednak dostarczyć metod zdefiniowanych i abstrakcyjnych, <br> które
+                                    muszą
+                                    zostać zdefiniowane w klasach potomnych. Jednak tego nie uzywamy w JS</span>
+                            </li>
+
+
+                            <li class="letter">
+                                <h4>Polimorfizm</h4> <br>
+                                <span>Polimorfizm to zdolność obiektu do przybierania różnych form. <br> Występuje np.,
+                                    w
+                                    sytuacji, gdy korzysta się z wielu klas, <br> powiązanych ze sobą poprzez
+                                    dziedziczenie.
+                                    Sprowadza się to do tego, że polimorfizm pozwala <br> na wykonanie wielu
+                                    implementacji
+                                    poprzez zdefiniowanie jednej klasy. <br> Przyklad polimorfizmu:</span>
+                            </li>
+                            <pre>
+                                <code class="language-javascript">class Animal{
+    makeSound(){
+    }
+}
+class Monkey extends Animal{
+    makeSound(){
+        console.log("uhuhaha");
+    }
+}
+class Wolf extends Animal{
+    makeSound(){
+        console.log("auuuu");
+    }
+    turnWerewolf(){
+        if(fullMoon === true){
+            werewolf();
+        }
+    }
+}
+class Dog extends Animal{
+    makeSound(){
+        console.log("woof")
+    }
+}
+const sirius = new Dog();
+sirius.makeSound(); //woof  
+const remus = new Wolf();
+remus.makeSound(); //auuu
+</code>
+</pre>
+                        </ol>
+                    </li>
+                </ol>
+                <!-- https://stormit.pl/programowanie-obiektowe/ -->
+
+
+            </div>
+
+            <!-- loader -->
+            <div class=" loader">
+                <div class="circles">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <span></span>
+                </div>
+            </div>
+</body>
+
+</html>

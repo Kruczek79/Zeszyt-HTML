@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pl-pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS lekcja 12</title>
+    <link rel="icon" href="../../../img/icon.png" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../../css/main/main.css">
+    <link rel="stylesheet" href="../../../css/main/icons/css/boxicons.min.css">
+    <link rel="stylesheet" href="../../../css/main/podst/tematy.css">
+    <link rel="stylesheet" href="../../../css/lekcje/js/lekcja12.css">
+    <!-- SCRIPTS -->
+    <script defer src="../../../js/main/jquery.js"></script>
+    <script defer src="../../../js/main/highlight.js"></script>
+    <script defer src="../../../js/main/main.js"></script>
+    <script defer src="../../../js/lekcje/lekcja12.js"></script>
+
+</head>
+
+<body class="dark">
+
+    <div id="container">
+        <div class="header"></div>
+
+        <div class="sidebar">
+            <div class="logo-content">
+                <div class="logo">Zeszyt HTML</div>
+            </div>
+            <i class='bx bx-menu' id="btn"></i>
+
+            <ul class="nav-list">
+                <li>
+                    <a href="../../../index.html">
+                        <i class='bx bxs-grid-alt'></i>
+                        <span class="link-name">Home</span>
+                    </a>
+                    <span class="tooltip">Home</span>
+                </li>
+                <li>
+                    <a href="../../Jezyki.html">
+                        <i class='bx bx-code-alt'></i>
+                        <span class="link-name">Jezyki Progr</span>
+                    </a>
+                    <span class="tooltip">Jezyki Progr</span>
+                </li>
+                <li>
+                    <a href="../../tematy.html">
+                        <i class='bx bxs-book'></i>
+                        <span class="link-name">Tematy</span>
+                    </a>
+                    <span class="tooltip">Tematy</span>
+                </li>
+                <li>
+                    <a href="../../plan.html">
+                        <i class='bx bx-calendar'></i>
+                        <span class="link-name">Plan Lekcji</span>
+                    </a>
+                    <span class="tooltip">Plan Lekcji</span>
+                </li>
+                <li class="mode">
+                    <div class="ms">
+                        <i class="bx bx-moon"></i>
+                    </div>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="topbar">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="note">
+                <h3 class="title">Temat: Obsluga formularzy - Ankieta</h3>
+                <span class="line"></span>
+                <div id="c">
+                    <form id="form">
+                        <div class="wrapper">
+                            <label for="name">Imie:</label>
+                            <input type="text" placeholder="podaj imie" id="name" class="input">
+                        </div>
+
+                        <div class="wrapper">
+                            <label for="name">Nazwisko:</label>
+                            <input type="text" placeholder="podaj nazwisko" id="surname" class="input">
+                        </div>
+                        Plec:
+                        <div class="col-wrapper">
+                            <input type="radio" name="plec" id="man" value="man">
+                            <label for="man" class="label">meszczyzna</label>
+                            <input type="radio" name="plec" id="woman" value="woman">
+                            <label for="man" class="label">kobita</label>
+                        </div>
+                        Zainteresowania:
+                        <div class="col-wrapper">
+                            <input type="checkbox" id="cb1"> Sport
+                            <input type="checkbox" id="cb2"> Informatyka
+                            <input type="checkbox" id="cb3"> Elektronika
+                        </div>
+                        Szkola:
+                        <select class="select" id="sel">
+                            <option value="1">podstawowa</option>
+                            <option value="2">srednia</option>
+                            <option value="3">wyzsza</option>
+                        </select>
+                        Krotko o sobie:
+                        <textarea id="des" class="textarea"></textarea>
+                        <div class="wrapper">
+                            <input type="submit" id="button" class="btn" value="Wyslij">
+                            <input type="reset" class="btn">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- loader -->
+    <div class="loader">
+        <div class="circles">
+            <div></div>
+            <div></div>
+            <div></div>
+            <span></span>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pl-pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS lekcja 6</title>
+    <link rel="icon" href="../../../img/icon.png" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../../css/main/main.css">
+    <link rel="stylesheet" href="../../../css/main/icons/css/boxicons.min.css">
+    <link rel="stylesheet" href="../../../css/main/podst/tematy.css">
+    <link rel="stylesheet" href="../../../css/lekcje/js/lekcja6.css">
+    <!-- SCRIPTS -->
+    <script defer src="../../../js/main/jquery.js"></script>
+    <script defer src="../../../js/main/highlight.js"></script>
+    <script defer src="../../../js/main/main.js"></script>
+    <script defer src="../../../js/lekcje/lekcja6.js"></script>
+
+</head>
+
+<body class="dark">
+
+    <div id="container">
+        <div class="header"></div>
+
+        <div class="sidebar">
+            <div class="logo-content">
+                <div class="logo">Zeszyt HTML</div>
+            </div>
+            <i class='bx bx-menu' id="btn"></i>
+
+            <ul class="nav-list">
+                <li>
+                    <a href="../../../index.html">
+                        <i class='bx bxs-grid-alt'></i>
+                        <span class="link-name">Home</span>
+                    </a>
+                    <span class="tooltip">Home</span>
+                </li>
+                <li>
+                    <a href="../../Jezyki.html">
+                        <i class='bx bx-code-alt'></i>
+                        <span class="link-name">Jezyki Progr</span>
+                    </a>
+                    <span class="tooltip">Jezyki Progr</span>
+                </li>
+                <li>
+                    <a href="../../tematy.html">
+                        <i class='bx bxs-book'></i>
+                        <span class="link-name">Tematy</span>
+                    </a>
+                    <span class="tooltip">Tematy</span>
+                </li>
+                <li>
+                    <a href="../../plan.html">
+                        <i class='bx bx-calendar'></i>
+                        <span class="link-name">Plan Lekcji</span>
+                    </a>
+                    <span class="tooltip">Plan Lekcji</span>
+                </li>
+                <li class="mode">
+                    <div class="ms">
+                        <i class="bx bx-moon"></i>
+                    </div>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="topbar">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="note">
+                <h3 class="title">Temat: Eventy w JS</h3>
+                <span class="line"></span>
+                <ol>
+                    <li>
+                        <h3>Czym Są eventy?</h3> <br>
+                        <span>Eventy to zdarzenia ktore dzieja sie elementom html(klikniecie, najechanie myszka)
+                            <br>Metody dodania zachowania gdy event zajdzie na danym elemencie</span>
+                        <ol>
+                            <li class="letter">
+                                <h4>Inline</h4> <br>
+                                <pre><code class="language-html">&lt;button event="kod javascriptu"&gt;</code></pre>
+                            </li>
+                            <li class="letter">
+                                <h4>element.event()</h4> <br>
+                                <pre><code class="language-javascript">element.event = function nazwa_funkcji(){
+    //operacje 
+}</code></pre>
+                            </li>
+                            <li class="letter">
+                                <h4>Add event listener</h4> <br>
+                                <span>Add event listener to nasluchiwacz eventow (najlepszy sposob na uzywanie eventow w
+                                    js)</span>
+                                <pre><code class="language-javascript">element.addEventListener("event", function nazwa_funkcji(){
+    //operacje                                    
+});</code></pre>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <h3>Przyklad uzycia eventow w js</h3>
+                        <table border="2px">
+                            <tr>
+                                <td id="click">click</td>
+                                <td id="dbclick">dbclick</td>
+                                <td id="mouseenter">mouse enter</td>
+                            </tr>
+
+                            <tr>
+                                <td id="mouseleave">mouse leave</td>
+                                <td id="mouseup">mouse up</td>
+                                <td></td>
+                            </tr>
+
+                            <tr>
+                                <td id="onmousemove">on mouse move</td>
+                                <td id="onwheel">on wheel</td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- loader -->
+    <div class="loader">
+        <div class="circles">
+            <div></div>
+            <div></div>
+            <div></div>
+            <span></span>
+        </div>
+    </div>
+</body>
+
+</html>

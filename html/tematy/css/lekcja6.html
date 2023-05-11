@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pl-pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS lekcja 6</title>
+    <link rel="icon" href="../../../img/icon.png" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../../css/main/main.css">
+    <link rel="stylesheet" href="../../../css/main/podst/tematy.css">
+    <link rel="stylesheet" href="../../../css/main/icons/css/boxicons.min.css">
+    <link rel="stylesheet" href="../../../css/lekcje/css/lekcja6.css">
+
+    <!-- SCRIPTS -->
+    <script src="../../../js/main/jquery.js"></script>
+    <script defer src="../../../js/main/highlight.js"></script>
+    <script defer src="../../../js/main/main.js"></script>
+
+</head>
+
+<body class="dark">
+
+    <div id="container">
+        <div class="header"></div>
+
+        <div class="sidebar">
+            <div class="logo-content">
+                <div class="logo">Zeszyt HTML</div>
+            </div>
+            <i class='bx bx-menu' id="btn"></i>
+
+            <ul class="nav-list">
+                <li>
+                    <a href="../../../index.html">
+                        <i class='bx bxs-grid-alt'></i>
+                        <span class="link-name">Home</span>
+                    </a>
+                    <span class="tooltip">Home</span>
+                </li>
+                <li>
+                    <a href="../../Jezyki.html">
+                        <i class='bx bx-code-alt'></i>
+                        <span class="link-name">Jezyki Progr</span>
+                    </a>
+                    <span class="tooltip">Jezyki Progr</span>
+                </li>
+                <li>
+                    <a href="../../tematy.html">
+                        <i class='bx bxs-book'></i>
+                        <span class="link-name">Tematy</span>
+                    </a>
+                    <span class="tooltip">Tematy</span>
+                </li>
+                <li>
+                    <a href="../../plan.html">
+                        <i class='bx bx-calendar'></i>
+                        <span class="link-name">Plan Lekcji</span>
+                    </a>
+                    <span class="tooltip">Plan Lekcji</span>
+                </li>
+                <li class="mode">
+                    <div class="ms">
+                        <i class="bx bx-moon"></i>
+                    </div>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="topbar">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="note">
+                <h3 class="title">Temat: Psuedo klasy CSS</h3>
+                <span class="line"></span>
+                <ol>
+                    <li>
+                        <h3>Co to pseudo klasy?</h3> <br>
+                        <span>Pseudo klasy to selektory css dla specjalnych zdarzen na elemencie (np: najechanie na
+                            element myszka)</span>
+                        <img src="" alt="obrazek z wygl pseudo klas">
+
+                    </li>
+                    <li>
+                        <h3>Przyklady pseudo klas</h3>
+                        <ol>
+                            <li class="letter">
+                                <h4>najechany link</h4>
+                                <pre>
+<code class="language-css">a:hover{
+    color:red;                                
+}</code>
+</pre>
+                                <a href="#" class="link hover">najedz mnie</a>
+                            </li>
+                            <li class="letter">
+                                <h4>odwiedzony link</h4>
+                                <pre>
+<code class="language-css">a:visited{
+    color:green;                                
+}</code>
+</pre>
+                                <a href="http://pracownia.palacmlodziezy.lodz.pl/pliki/materialy/css/tutor/CSS_1.6.pdf"
+                                    class="link visited">odwiedz mnie</a>
+                            <li class="letter">
+                                <h4>wybrany link</h4>
+                                <pre>
+<code class="language-css">a:active{
+    color:blue;                                
+}</code>
+</pre>
+                                <a href="#" class="link active">aktywny jestem</a>
+                            </li>
+                            <li class="letter">
+                                <h4>pierwsze dziecko</h4>
+                                <pre>
+<code class="language-css">p:first-child{
+    color:blue;                                
+}</code>
+</pre>
+                                <div class="nthChild">
+                                    <div>Jestem kolorowym dzieckiem</div>
+                                </div>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <h3>Co to pseudo elementy?</h3> <br>
+                        <span>Pseudoelement CSS służy do stylizowania określonych części elementu <br> (np.: zmiana
+                            wyglądu
+                            pierwszej litery lub <br> linijki elementu wstawianie zawartości przed lub po elemencie
+                            )
+                        </span>
+                        <img src="" alt="obrazek budowa pseudo element">
+                        <ol>
+                            <li class="letter">
+                                <h4>Pierwsza literka</h4>
+                                <pre><code class="language-css">div::first-letter{
+    color:aqua;
+    font-size:50px;                                
+}</code>
+</pre>
+                                <div class="firstLetter">J estem duza literka</div>
+                            </li>
+                            <li class="letter">
+                                <h4>After</h4>
+                                <pre><code class="language-css">div::after{
+    content:"after";
+    color:red;                              
+}</code>
+</pre>
+                                <div class="after">tekst</div>
+                            </li>
+                            <li class="letter">
+                                <h4>Before</h4>
+                                <pre><code class="language-css">div::before{
+    content:"before";
+    color:blue;                              
+}</code>
+</pre>
+                                <div class="before">tekst</div>
+                            </li>
+                            <li class="letter">
+                                <h4>Selection</h4>
+                                <pre><code class="language-css">div:selection{
+    background-color:orange;
+    color:red;                              
+}</code>
+</pre>
+                                <div class="selection">kolorowa selekcja </div>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- loader -->
+        <div class="loader">
+            <div class="circles">
+                <div></div>
+                <div></div>
+                <div></div>
+                <span></span>
+            </div>
+        </div>
+</body>
+
+</html>

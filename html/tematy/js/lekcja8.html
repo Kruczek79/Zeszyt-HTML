@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pl-pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS lekcja 8</title>
+    <link rel="icon" href="../../../img/icon.png" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../../css/main/main.css">
+    <link rel="stylesheet" href="../../../css/main/icons/css/boxicons.min.css">
+    <link rel="stylesheet" href="../../../css/main/podst/tematy.css">
+    <link rel="stylesheet" href="../../../css/lekcje/js/lekcja8.css">
+    <!-- SCRIPTS -->
+    <script defer src="../../../js/main/jquery.js"></script>
+    <script defer src="../../../js/main/highlight.js"></script>
+    <script defer src="../../../js/main/main.js"></script>
+    <script defer src="../../../js/lekcje/lekcja8.js"></script>
+
+</head>
+
+<body class="dark">
+
+    <div id="container">
+        <div class="header"></div>
+
+        <div class="sidebar">
+            <div class="logo-content">
+                <div class="logo">Zeszyt HTML</div>
+            </div>
+            <i class='bx bx-menu' id="btn"></i>
+
+            <ul class="nav-list">
+                <li>
+                    <a href="../../../index.html">
+                        <i class='bx bxs-grid-alt'></i>
+                        <span class="link-name">Home</span>
+                    </a>
+                    <span class="tooltip">Home</span>
+                </li>
+                <li>
+                    <a href="../../Jezyki.html">
+                        <i class='bx bx-code-alt'></i>
+                        <span class="link-name">Jezyki Progr</span>
+                    </a>
+                    <span class="tooltip">Jezyki Progr</span>
+                </li>
+                <li>
+                    <a href="../../tematy.html">
+                        <i class='bx bxs-book'></i>
+                        <span class="link-name">Tematy</span>
+                    </a>
+                    <span class="tooltip">Tematy</span>
+                </li>
+                <li>
+                    <a href="../../plan.html">
+                        <i class='bx bx-calendar'></i>
+                        <span class="link-name">Plan Lekcji</span>
+                    </a>
+                    <span class="tooltip">Plan Lekcji</span>
+                </li>
+                <li class="mode">
+                    <div class="ms">
+                        <i class="bx bx-moon"></i>
+                    </div>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="topbar">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="note">
+                <h3 class="title">Temat: Tablice</h3>
+                <span class="line"></span>
+                <ol>
+                    <li>
+                        <h3>Czym sa tablice</h3> <br>
+                        <span>Tablice to zbior zmiennych. <br> Jej poszczególne elementy są rozróżniane poprzez
+                            przypisane im
+                            liczby nazywane indeksami. <br>Indeksy tablic zawsze zaczynają się od zera.</span>
+                    </li>
+                    <li>
+                        <h3>Tworzenie tablic w JS</h3>
+                        <span>Tablice moze wypelniac kazdy rodzaj zmiennej i obiekty</span>
+                        <pre><code class="language-javascript">let tablica = [] //tworzenie pustej tablicy</code>
+</pre>
+                        <pre><code class="language-javascript">let tablica = [1,2,3,4] //tworzenie tablicy z liczbami</code>
+</pre>
+                        <pre><code class="language-javascript">let tablica = []; //tworzenie pustej tablicy
+tablica[0] = "a"; //definiowanie wartosci tablicy o indeksie 0
+tablica[1] = "b"; //definiowanie wartosci tablicy o indeksie 1
+                        </code>
+</pre>
+                    </li>
+                    <li>
+                        <h3>Metody Tablic</h3>
+                        <span>Tablice to obiekty <br> Obiekty posiadaja swoje funkcje(metody) <br>Metody tablic:</span>
+                        <ol>
+                            <li class="letters">
+                                <h4>Map</h4> <br>
+                                <span>Przechodzi przez kazdy element tablicy i robi cos dla kazdego elementu
+                                    tablicy. <br>Zwraca nowa zmieniona tablice</span>
+                                <pre><code class="language-javascript">const array1 = [1, 4, 9, 16];
+const map1 = array1.map(x => x * 2); // [2, 8, 18, 32]
+</code>
+</pre>
+                            </li>
+                            <li class="letters">
+                                <h4>For each</h4><br>
+                                <span>Przechodzi przez kazdy element tablicy i robi cos dla kazdego elementu
+                                    tablicy. <br>Zwraca zmieniona tablice</span>
+                                <pre>
+<code class="language-javascript">const array1 = ['a', 'b', 'c'];
+array1.forEach(element => console.log(element)); //a b c
+</code>
+</pre>
+                            </li>
+                            <li class="letters">
+                                <h4>Sort</h4><br>
+                                <span>Sortuje elementy tablicy</span>
+                                <pre>
+<code class="language-javascript">const array1 = [1, 30, 4, 21, 100000];
+array1.sort(); //[1, 100000, 21, 30, 4]</code>
+</pre>
+                            </li>
+                            <li class="letters">
+                                <h4>IndexOf</h4><br>
+                                <span>Sprawdza index podanego elementu w danej tablicy</span>
+                                <pre>
+<code class="language-javascript">const array1 = [1, 30, 4, 21, 100000];
+array1.indexOf(1); //0
+</code>
+</pre>
+                            </li>
+                            <li class="letters">
+                                <h4>Some</h4><br>
+                                <span>Sprawdza czy jakis element tablicy spelnia warunek</span>
+                                <pre>
+<code class="language-javascript">const array = [1, 2, 3, 4, 5];
+console.log(array.some( (element) => {
+    element % 2 === 0
+})); //true;
+</code>
+</pre>
+                            </li>
+                            <li class="letters">
+                                <h4>every</h4><br>
+                                <span>Sprawdza czy wszystkie elementy tablicy spelniaja warunek</span>
+                                <pre>
+<code class="language-javascript">const array1 = [1, 30, 39, 29, 10, 13];
+console.log(array1.every( (currentValue) => currentValue < 40)) //true
+</code>
+</pre>
+                            </li>
+                            <li class="letters">
+                                <h4>Pop</h4><br>
+                                <span>Kasuje ostatni element tablicy</span>
+                                <pre>
+<code class="language-javascript">const plants = ['broccoli', 'cauliflower', 'cabbage', 'kale', 'tomato'];
+plants.pop();
+console.log(plants) //['broccoli', 'cauliflower', 'cabbage', 'kale']
+</code>
+</pre>
+                            </li>
+                            <li class="letters">
+                                <h4>Push</h4><br>
+                                <span>Dodaje element do tablicy</span>
+                                <pre>
+<code class="language-javascript">const animals = ['pigs', 'goats', 'sheep'];
+animals.push('cows');
+console.log(animals); //["pigs", "goats", "sheep", "cows"]
+</code>
+</pre>
+                            </li>
+                            <li class="letters">
+                                <h4>Reverse</h4><br>
+                                <span>Odwraca tablice</span>
+                                <pre>
+<code class="language-javascript">const array1 = ['one', 'two', 'three'];
+array1.reverse();
+console.log(array1); //["three", "two", "one"]
+</code>
+</pre>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <h3>Przykladowe uzycie kilku metod</h3> <br>
+                        <span>
+                            <span id="array">Tablica: </span>
+                            <div class="column-wrapper">
+                                <input type="submit" value="pop" id="popBtn">
+                                <div class="wrapper">
+                                    <input type="submit" value="push" id="pushBtn">
+                                    <input type="text" id="pushValue">
+                                </div>
+                                <input type="submit" value="sortBtn" id="sortBtn">
+                                <input type="submit" value="reverseBtn" id="reverseBtn">
+                                <input type="submit" value="reset" id="reset">
+                            </div>
+
+                        </span>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- loader -->
+    <div class="loader">
+        <div class="circles">
+            <div></div>
+            <div></div>
+            <div></div>
+            <span></span>
+        </div>
+    </div>
+</body>
+
+</html>

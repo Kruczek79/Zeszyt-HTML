@@ -1,0 +1,38 @@
+.link {
+	color: white;
+	text-decoration: none;
+	font-weight: normal;
+	width: fit-content;
+	background-color: #242a46;
+	padding: 10px;
+	border-radius: 12px;
+}
+.hover:hover {
+	color: red;
+}
+.visited {
+	color: green;
+}
+.active {
+	color: blue;
+}
+
+.nthChild:nth-child(odd) {
+	color: firebrick;
+}
+.firstLetter::first-letter {
+	color: aqua;
+	font-size: 50px;
+}
+.after::after {
+	content: "after";
+	color: red;
+}
+.before::before {
+	content: "before";
+	color: aqua;
+}
+.selection::selection {
+	color: red;
+	background-color: orange;
+}

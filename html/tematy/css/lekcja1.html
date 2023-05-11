@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pl-pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS lekcja 1</title>
+    <link rel="icon" href="../../../img/icon.png" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../../css/main/main.css">
+    <link rel="stylesheet" href="../../../css/lekcje/css/lekcja1.css">
+    <link rel="stylesheet" href="../../../css/main/icons/css/boxicons.min.css">
+    <link rel="stylesheet" href="../../../css/main/podst/tematy.css">
+    <!-- SCRIPTS -->
+    <script src="../../../js/main/jquery.js"></script>
+    <script defer src="../../../js/main/highlight.js"></script>
+    <script defer src="../../../js/main/main.js"></script>
+
+</head>
+
+<body class="dark">
+
+    <div id="container">
+        <div class="header"></div>
+
+        <div class="sidebar">
+            <div class="logo-content">
+                <div class="logo">Zeszyt HTML</div>
+            </div>
+            <i class='bx bx-menu' id="btn"></i>
+
+            <ul class="nav-list">
+                <li>
+                    <a href="../../../index.html">
+                        <i class='bx bxs-grid-alt'></i>
+                        <span class="link-name">Home</span>
+                    </a>
+                    <span class="tooltip">Home</span>
+                </li>
+                <li>
+                    <a href="../../Jezyki.html">
+                        <i class='bx bx-code-alt'></i>
+                        <span class="link-name">Jezyki Progr</span>
+                    </a>
+                    <span class="tooltip">Jezyki Progr</span>
+                </li>
+                <li>
+                    <a href="../../tematy.html">
+                        <i class='bx bxs-book'></i>
+                        <span class="link-name">Tematy</span>
+                    </a>
+                    <span class="tooltip">Tematy</span>
+                </li>
+                <li>
+                    <a href="../../plan.html">
+                        <i class='bx bx-calendar'></i>
+                        <span class="link-name">Plan Lekcji</span>
+                    </a>
+                    <span class="tooltip">Plan Lekcji</span>
+                </li>
+                <li class="mode">
+                    <div class="ms">
+                        <i class="bx bx-moon"></i>
+                    </div>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="topbar">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="note">
+                <h3 class="title">Temat: CSS - wprowadzenie</h3>
+                <span class="line"></span>
+                <ol>
+                    <li>
+                        <h3>Sposoby umieszczania css</h3>
+                        <ol>
+                            <li class="letter">
+                                <h4>Inline</h4> <br>
+                                <span> CSS mozemy umiescic tzw inline czyli za pom atrybutu html style</span>
+                                <pre>
+                                    <code class="language-html">&lt;a style="background-color:red"&gt;linkacz czerwony&lt;/a&gt;</code> 
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>Za pom znacznika style</h4> <br>
+                                <span> CSS mozemy umiescic w sekcji head w znaczniku style</span>
+                                <pre>
+                                    <code class="language-html">&lt;head&gt;
+    &lt;style&gt;
+        &lt;!--umieszczamy tu style css--&gt;
+    &lt;/style&gt;
+&lt;/head&gt;</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>Zewnetrzny plik .css</h4> <br>
+                                <span> CSS mozemy umiescic w oddzielnym pliku css <br>
+                                    Zalaczamy go z uzyciem znacznika link w sekcji head</span>
+                                <pre>
+                                    <code class="language-html">&lt;head&gt;
+    &lt;link rel="stylesheet" href="sciezka_do_pliku.css"&gt;
+&lt;/head&gt;</code>
+</pre>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <h3>Selektory CSS i reguly styli</h3> <br>
+                        <ol>
+                            <li class="letter">
+                                <h4>Reguly styli</h4> <br>
+                                <span> W css tworzy sie tzw reguly styli(ang: rulesets),<br> ktore okreslaja wyglad i
+                                    polozenie
+                                    elementu html na stronie</span>
+                            </li>
+                            <li class="letter">
+                                <h4>Selektory</h4>
+                                <ul>
+
+                                    <li>
+                                        <h4>Selektory</h4>
+                                        <br>
+                                        <span> Do okreslenia reguly stylu uzywamy selektorow,<br> ktore okreslaja jaki
+                                            element
+                                            chcemy
+                                            wystylizowac</span> <br> <br>
+                                    </li>
+                                    <li>
+                                        <h4>Budowa selektora</h4>: <br>
+                                        <img src="../../../img/lekcje/css/selektory.png" alt="">
+                                    </li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <h3>ID oraz Klasa</h3>
+                        <ol>
+                            <li class="letter">
+                                <h4>Klasa</h4> <br>
+                                <span> Klasa to selektor dla wiecej niz jednej ilosci elementow. <br>Nadajemy ja
+                                    uzywajac
+                                    atrybutu html class</span>
+                                <pre>
+                                    <code class="language-html">&lt;div class="klasa"&gt;&lt;/div&gt;</code>
+</pre>
+                                <span> Chcac ustawic styl dla klasy uzywamy selektora ".nazwa_klasy"</span>
+                                <pre>
+                                    <code class="language-css">.nazwa_klasy{
+    color:red;                                
+}
+                                    </code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>ID</h4> <br>
+                                <span> ID to selektor ktory identyfikuje pojedynczy element html <br>Nadajemy go
+                                    uzywajac
+                                    atrybutu html id</span>
+                                <pre>
+                                    <code class="language-html">&lt;div id="identyfikator"&gt;&lt;/div&gt;</code>
+</pre>
+                                <span> Chcac ustawic styl dla elementu z id uzywamy selektora "#identyfikator"</span>
+                                <pre>
+                                    <code class="language-css">#identyfikator{
+    color:red;                                
+}
+                                    </code>
+</pre>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- loader -->
+    <div class="loader">
+        <div class="circles">
+            <div></div>
+            <div></div>
+            <div></div>
+            <span></span>
+        </div>
+    </div>
+</body>
+
+</html>

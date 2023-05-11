@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pl-pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS lekcja 2</title>
+    <link rel="icon" href="../../../img/icon.png" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../../css/main/main.css">
+    <link rel="stylesheet" href="../../../css/main/icons/css/boxicons.min.css">
+    <link rel="stylesheet" href="../../../css/main/podst/tematy.css">
+    <!-- SCRIPTS -->
+    <script defer src="../../../js/main/jquery.js"></script>
+    <script defer src="../../../js/main/highlight.js"></script>
+    <script defer src="../../../js/main/main.js"></script>
+
+</head>
+
+<body class="dark">
+
+    <div id="container">
+        <div class="header"></div>
+
+        <div class="sidebar">
+            <div class="logo-content">
+                <div class="logo">Zeszyt HTML</div>
+            </div>
+            <i class='bx bx-menu' id="btn"></i>
+
+            <ul class="nav-list">
+                <li>
+                    <a href="../../../index.html">
+                        <i class='bx bxs-grid-alt'></i>
+                        <span class="link-name">Home</span>
+                    </a>
+                    <span class="tooltip">Home</span>
+                </li>
+                <li>
+                    <a href="../../Jezyki.html">
+                        <i class='bx bx-code-alt'></i>
+                        <span class="link-name">Jezyki Progr</span>
+                    </a>
+                    <span class="tooltip">Jezyki Progr</span>
+                </li>
+                <li>
+                    <a href="../../tematy.html">
+                        <i class='bx bxs-book'></i>
+                        <span class="link-name">Tematy</span>
+                    </a>
+                    <span class="tooltip">Tematy</span>
+                </li>
+                <li>
+                    <a href="../../plan.html">
+                        <i class='bx bx-calendar'></i>
+                        <span class="link-name">Plan Lekcji</span>
+                    </a>
+                    <span class="tooltip">Plan Lekcji</span>
+                </li>
+                <li class="mode">
+                    <div class="ms">
+                        <i class="bx bx-moon"></i>
+                    </div>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="topbar">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="note">
+                <h3 class="title">Temat: Zmienne JS</h3>
+                <span class="line"></span>
+                <ol>
+                    <li>
+                        <h3>Co to zmienne</h3> <br>
+                        <span>Zmienne to zarezerwowane szufladki w pamieci ram komputera ktorym przypisujemy wartosci.
+                            <br> Sluzy do przechowywania jakis wartosci.<br></span>
+                    </li>
+                    <li>
+                        <h3>Rodzaje zmiennych</h3><br>
+                        <span>Zmienne dzielimy na wiele rodzajow m.in.:</span>
+                        <ol>
+                            <li class="letter">
+                                <h4>Liczby calkowite (Inty)</h4> <br>
+                                <span>Liczby calkowite bez przecinka np:. 20</span>
+                                <pre><code class="language-javascript"> let i = 20;                                    
+</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>Liczby zmienno przecikowe (Floaty)</h4><br>
+                                <span>Liczby z przecinkiem np:. 1,5</span>
+                                <pre><code class="language-javascript">let f = 1,5;                                    
+</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>Lancuchy znakow (Stringi)</h4><br>
+                                <span>Zmienne przechowujace tekst np:. "ala ma kota"</span>
+                                <pre><code class="language-javascript">let str = "ala ma kota";                                    
+</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>Booleany (Prawda/Falsz)</h4><br>
+                                <span>Zmienne prawda lub falsz</span>
+                                <pre><code class="language-javascript">let bool = true; 
+let boolean2 = false;                                    
+</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>NaN (Not A Number)</h4><br>
+                                <span>Wartosc ktora nie jest liczba</span>
+                                <pre><code class="language-javascript">let nan = NaN;                                    
+</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>Undefined</h4><br>
+                                <span>Wartosc niezdefiniowana (nie posiada zaden z typow)</span>
+                                <pre><code class="language-javascript">let ud = undefined;                                    
+</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>Null</h4><br>
+                                <span>Wartosc pusta (nie posiada zaden z typow)</span>
+                                <pre><code class="language-javascript">let n = null;                                    
+</code>
+</pre>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <h3>Sposoby deklaracji zmiennych</h3>
+                        <span>Zmienne deklarujemy na 3 rozne sposoby:</span>
+                        <ol>
+                            <li class="letter">
+                                <h4>Let</h4> <br>
+                                <span>Let dziala w bloku
+                                    tzn ze:.<br> gdy let jest zadeklarowany w funckji, instrukcji warunkowej, itp <br>
+                                    To js
+                                    bedzie
+                                    widziec ta zmienna jedynie w tej funkcji, instrukcji warunkowej nie poza nia</span>
+                                <pre>
+<code class="language-javascript">let variable1 = true; //zmienna let</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>Const</h4><br>
+                                <span>Const jest to wartosc stala nie zmienna. Dziala w zasiegu takim samym jak
+                                    let</span>
+                                <pre>
+<code class="language-javascript">const variable1 = "makapaka"; //stala</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>Var</h4><br>
+                                <span>Var dziala w zasiegu funkcji lub innych struktur tzn ze:. <br> gdy var jest
+                                    zadeklarowany w funkcji/instrukcji warunkowej <br>to js bedzie widziec ta zmienna
+                                    jakby
+                                    dzialala globalnie dla calego dokumentu</span>
+                                <pre>
+<code class="language-javascript">var variable1 = 23; //zmienna war</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>Wytlumaczenie:</h4>
+                                <pre><code class="language-javascript">if(true)
+{
+    var variable1 = "makapaka"; //widoczna poza funkcja
+    let variable2 = "makapaka"; //niewidoczna poza funkcja
+}
+</code>
+</pre>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- loader -->
+    <div class="loader">
+        <div class="circles">
+            <div></div>
+            <div></div>
+            <div></div>
+            <span></span>
+        </div>
+    </div>
+</body>
+
+</html>

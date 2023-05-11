@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pl-pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL lekcja 1</title>
+    <link rel="icon" href="../../../img/icon.png" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../../css/main/main.css">
+    <link rel="stylesheet" href="../../../css/main/icons/css/boxicons.min.css">
+    <link rel="stylesheet" href="../../../css/main/podst/tematy.css">
+    <!-- SCRIPTS -->
+    <script src="../../../js/main/jquery.js"></script>
+    <script src="../../../js/main/highlight.js"></script>
+    <script defer src="../../../js/main/main.js"></script>
+
+</head>
+
+<body class="dark">
+
+    <div id="container">
+        <div class="header"></div>
+
+        <div class="sidebar">
+            <div class="logo-content">
+                <div class="logo">Zeszyt HTML</div>
+            </div>
+            <i class='bx bx-menu' id="btn"></i>
+
+            <ul class="nav-list">
+                <li>
+                    <a href="../../../index.html">
+                        <i class='bx bxs-grid-alt'></i>
+                        <span class="link-name">Home</span>
+                    </a>
+                    <span class="tooltip">Home</span>
+                </li>
+                <li>
+                    <a href="../../../html/jezyki.html">
+                        <i class='bx bx-code-alt'></i>
+                        <span class="link-name">Jezyki Progr</span>
+                    </a>
+                    <span class="tooltip">Jezyki Progr</span>
+                </li>
+                <li>
+                    <a href="../../../html/tematy.html">
+                        <i class='bx bxs-book'></i>
+                        <span class="link-name">Tematy</span>
+                    </a>
+                    <span class="tooltip">Tematy</span>
+                </li>
+                <li>
+                    <a href="../../../html/plan.html">
+                        <i class='bx bx-calendar'></i>
+                        <span class="link-name">Plan Lekcji</span>
+                    </a>
+                    <span class="tooltip">Plan Lekcji</span>
+                </li>
+                <li class="mode">
+                    <div class="ms">
+                        <i class="bx bx-moon"></i>
+                    </div>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="topbar">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="note">
+                <h3 class="title">Temat: SQL - Podstawowe polecenia</h3><br>
+                <span class="line"></span>
+                <ol>
+                    <li>
+                        <h3>Podstawowe polecenia sql</h3>
+                        <ol>
+                            <li class="letter">
+                                <h4>Polecenie CREATE</h4> <br>
+                                <span>Sluzy do tworzenia uzytkownikow/tabel/baz danych</span>
+                                <ul>
+                                    <li>
+                                        <h4>Uzytkownik</h4>
+                                        <pre><code class="language-sql">--tworzenie uzytkownika
+CREATE USER 'nazwa_uzytkownika'@'localhost' IDENTIFIED WITH mysql_native_password BY 'haslo';</code></pre>
+                                    </li>
+                                    <li>
+                                        <h4>Baza danych</h4>
+                                        <pre><code class="language-sql">--tworzenie bazy
+CREATE DATABASE nazwa_bazy;</code>
+</pre>
+                                    </li>
+                                    <li>
+                                        <h4>Baza danych</h4>
+                                        <pre><code class="language-sql">--tworzenie tabeli
+CREATE TABLE nazwa_tabeli(
+    typ_kolumny1 nazwa_kolumny1,
+    typ_kolumny2 nazwa_kolumny2,
+);</code>
+</pre>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="letter">
+                                <h4>Polecenie DROP</h4> <br>
+                                <span>Sluzy do usuwania tabeli/uzytkownika/bazy danych</span>
+                                <ul>
+                                    <li>
+                                        <h4>Uzytkownik</h4>
+                                        <pre><code class="language-sql">--usuwanie uzytkownika
+DROP USER 'nazwa_uzytkownika'@'localhost';</code></pre>
+                                    </li>
+                                    <li>
+                                        <h4>Baza danych</h4>
+                                        <pre><code class="language-sql">--usuwanie bazy
+DROP DATABASE nazwa_bazy;</code>
+</pre>
+                                    </li>
+                                    <li>
+                                        <h4>Baza danych</h4>
+                                        <pre><code class="language-sql">--usuwanie tabeli
+DROP TABLE nazwa_tabeli</code>
+</pre>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="letter">
+                                <h4>Polecenie ALTER</h4> <br>
+                                <span>Sluzy do modyfikacji tabeli</span>
+                                <ul>
+                                    <li>
+                                        <h4>Dodawanie kolumny</h4>
+                                        <pre><code class="language-sql">--dodawanie kolumny 
+ALTER TABLE nazwa_tabeli ADD nazwa_kolumny typ_kolumny</code>
+</pre>
+                                    </li>
+                                    <li>
+                                        <h4>Usuwanie kolumny</h4>
+                                        <pre><code class="language-sql">--usuwanie kolumny 
+ALTER TABLE nazwa_tabeli DROP COLUMN nazwa_kolumny;</code>
+</pre>
+                                    </li>
+                                    <li>
+                                        <h4>Zmiana nazwy kolumny</h4>
+                                        <pre><code class="language-sql">--zmiana nazwy kolumny 
+ALTER TABLE nazwa_tabeli COLUMN RENAME stara_nazwa to nowa_nazwa</code>
+</pre>
+                                    </li>
+                                    <li>
+                                        <h4>Zmiana typu kolumny</h4>
+                                        <pre><code class="language-sql">--zmiana typu kolumny 
+ALTER TABLE nazwa_tabeli MODIFY COLUMN nazwa_kolumny typ_danych</code>
+</pre>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="letter">
+                                <h4>Polecenie UPDATE</h4> <br>
+                                <span>Update sluzy do modyfikacji wpisanych danych w tabeli</span>
+                                <pre><code class="language-sql">--zmiana danych w tabeli
+UPDATE nazwa_tabeli SET nazwa_kolumny="wartosc" WHERE warunek</code>
+</pre>
+                            </li>
+                            <!-- TODO POLECENIA -->
+                            <li class="letter">
+                                <h4>Polecenie INSERT</h4> <br>
+                                <span></span>
+                            </li>
+                            <li class="letter">
+                                <h4>Polecenie DELETE</h4> <br>
+                                <span></span>
+                            </li>
+                        </ol>
+                    <li>
+                        <h3>Typy danych SQL</h3>
+                        <span> </span>
+                        <!-- https://www.w3schools.com/sql/sql_datatypes.asp -->
+                    </li>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- loader -->
+    <div class="loader">
+        <div class="circles">
+            <div></div>
+            <div></div>
+            <div></div>
+            <span></span>
+        </div>
+    </div>
+
+</body>
+
+</html>

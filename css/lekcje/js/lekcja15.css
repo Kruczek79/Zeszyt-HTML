@@ -1,0 +1,48 @@
+.input {
+	font-size: 20px;
+	width: 350px;
+	padding: 10px;
+	border-radius: 12px;
+	border: 1px solid black;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+.sel {
+	width: 200px;
+	margin-right: 5px;
+	border-radius: 12px;
+	border: 1px solid black;
+}
+.btn {
+	width: 90px;
+	height: 50px;
+	padding: 10px;
+	font-size: 20px;
+	border-radius: 12px;
+	text-align: center;
+	border: 1px solid black;
+	color: black !important;
+}
+.btn:hover {
+	color: rgb(67, 67, 67) !important;
+	background-color: #9d9d9d;
+	cursor: pointer;
+}
+.inputSt {
+	font-size: 20px;
+	width: 100px;
+	padding: 10px;
+	border-radius: 12px;
+	border: 1px solid black;
+}
+#char {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+#equals {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.chars {
+	margin-right: 5px;
+}

@@ -1,0 +1,46 @@
+.input {
+	font-size: 20px;
+	width: 350px;
+	padding: 10px;
+	border-radius: 12px;
+	border: 1px solid black;
+	margin-right: 10px;
+}
+.btn {
+	width: fit-content;
+	height: 50px;
+	padding: 10px;
+	font-size: 20px;
+	border-radius: 12px;
+	text-align: center;
+	border: 1px solid black;
+}
+.btn:hover {
+	cursor: pointer;
+	background-color: #787777;
+	color: white;
+	transition: all 0.5s ease;
+}
+.inputShr {
+	font-size: 20px;
+	width: 200px;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid black;
+	height: 30px;
+}
+.reqiured {
+	font-size: 30px;
+}
+#email {
+	margin-left: 101px;
+}
+#grade {
+	margin-left: 97px;
+}
+label {
+	font-weight: normal;
+}
+#date {
+	margin-left: 15px;
+}

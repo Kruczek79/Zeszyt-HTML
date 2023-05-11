@@ -1,0 +1,40 @@
+.redtxt {
+	color: red !important;
+}
+.greentxt {
+	color: #03ca03 !important;
+}
+.bluetxt {
+	color: blue !important;
+}
+.blacktxt {
+	color: #000 !important;
+}
+.red {
+	background-color: red;
+}
+.green {
+	background-color: #03ca03;
+}
+.blue {
+	background-color: blue;
+}
+table {
+	background-color: white;
+	width: 650px;
+	color: black !important;
+	border-collapse: collapse;
+}
+table tr th {
+	padding: 10px;
+}
+table tr td {
+	padding: 10px;
+	white-space: nowrap;
+}
+table tr:nth-child(1) {
+	background-color: #e7e9eb;
+}
+table tr:nth-child(3) {
+	background-color: #e7e9eb;
+}

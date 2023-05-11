@@ -1,0 +1,40 @@
+.solid {
+	border: 2px solid #000000;
+	width: fit-content;
+	padding: 10px;
+	transition: all 0.4s ease;
+}
+body.dark .solid {
+	border: 2px solid #ffffff;
+	transition: all 0.4s ease;
+}
+.dashed {
+	border: 2px dashed #000000;
+	width: fit-content;
+	padding: 10px;
+	transition: all 0.4s ease;
+}
+body.dark .dashed {
+	border: 2px dashed #ffffff;
+	transition: all 0.4s ease;
+}
+.dotted {
+	border: 2px dotted #000000;
+	width: fit-content;
+	padding: 10px;
+	transition: all 0.4s ease;
+}
+body.dark .dotted {
+	border: 2px dotted #ffffff;
+	transition: all 0.4s ease;
+}
+.double {
+	border: 2px double #000000;
+	width: fit-content;
+	padding: 10px;
+	transition: all 0.4s ease;
+}
+body.dark .double {
+	border: 1px double #ffffff;
+	transition: all 0.4s ease;
+}

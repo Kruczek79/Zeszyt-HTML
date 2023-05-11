@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pl-pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML lekcja 4</title>
+    <link rel="icon" href="../../../img/icon.png" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../../css/main/main.css">
+    <link rel="stylesheet" href="../../../css/lekcje/html/lekcja4.css">
+    <link rel="stylesheet" href="../../../css/main/icons/css/boxicons.min.css">
+    <link rel="stylesheet" href="../../../css/main/podst/tematy.css">
+    <!-- SCRIPTS -->
+    <script src="../../../js/main/jquery.js"></script>
+    <script defer src="../../../js/main/highlight.js"></script>
+    <script defer src="../../../js/main/main.js"></script>
+
+</head>
+
+<body class="dark">
+
+    <div id="container">
+        <div class="header"></div>
+
+        <div class="sidebar">
+            <div class="logo-content">
+                <div class="logo">Zeszyt HTML</div>
+            </div>
+            <i class='bx bx-menu' id="btn"></i>
+
+            <ul class="nav-list">
+                <li>
+                    <a href="../../../index.html">
+                        <i class='bx bxs-grid-alt'></i>
+                        <span class="link-name">Home</span>
+                    </a>
+                    <span class="tooltip">Home</span>
+                </li>
+                <li>
+                    <a href="../../Jezyki.html">
+                        <i class='bx bx-code-alt'></i>
+                        <span class="link-name">Jezyki Progr</span>
+                    </a>
+                    <span class="tooltip">Jezyki Progr</span>
+                </li>
+                <li>
+                    <a href="../../tematy.html">
+                        <i class='bx bxs-book'></i>
+                        <span class="link-name">Tematy</span>
+                    </a>
+                    <span class="tooltip">Tematy</span>
+                </li>
+                <li>
+                    <a href="../../plan.html">
+                        <i class='bx bx-calendar'></i>
+                        <span class="link-name">Plan Lekcji</span>
+                    </a>
+                    <span class="tooltip">Plan Lekcji</span>
+                </li>
+                <li class="mode">
+                    <div class="ms">
+                        <i class="bx bx-moon"></i>
+                    </div>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="topbar">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="note">
+                <h3 class="title">Temat: Podstawowe Znaczniki HTML</h3>
+                <span class="line"></span>
+                <ol>
+                    <li>
+                        <h3>Budowa Znacznika HTML</h3> <br> <br>
+                        <span> HTML składa sie z tzw znacznikow ktore definiują elementy na stronie internetowej.</span>
+                        <ol>
+                            <li class="letter">
+                                <span> Kazdy znacznik zawiera swoje&nbsp;<span
+                                        class="red">otwarcie</span>&nbsp;oraz&nbsp;
+                                    <span class="green">zamkniecie</span>: <br> </span>
+                                <img src="../../../img/lekcje/html/znaczniki.png"> <br>
+                            </li>
+                            <li class="letter">
+                                <span> Istnieją rowniez wyjątki od tej reguły ktore nie posiadają zamkniecia np:.
+                                    znacznik img.</span>
+                                <br>
+                                <img src="../../../img/lekcje/html/znaczniki3.png"><br>
+                            </li>
+                            <li class="letter">
+                                <span> Kazdy znacznik moze posiadac swoje <span class="violet">atrybuty</span> np:.
+                                    znacznik
+                                    "a"
+                                    posiada swoj atrybut href, <br> ktory
+                                    wskazuje gdzie przeniesc sie po nacisnieciu linku.</span> <br>
+                                <img src="../../../img/lekcje/html/znaczniki2.png">
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <h3>Struktura strony HTML</h3> <br> <br>
+                        <ol>
+                            <li class="letter">
+                                <h4>Deklaracja doctype</h4> <br>
+                                <span> Strona html zaczyna sie od tzw deklaracji doctype ktora jest wymagana</span>
+                                <pre>
+                            <code class="language-html">&lt;!DOCTYPE html&gt;</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>Znacznik html</h4> <br>
+                                <span> Nastepnie znajduje sie znacznik html ktory jest rowniez wymagany. <br> Tutaj
+                                    umieszczamy
+                                    wszystkie
+                                    pozostale znaczniki.</span>
+                                <pre>
+                            <code class="language-html">&lt;html&gt;&lt;/html&gt;</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>Sekcja Head</h4> <br>
+                                <span> Sekcja head w ktorej umieszczamy wszystko co chcemy załączyc na naszą strone,
+                                    <br> co
+                                    chcemy
+                                    aby
+                                    odwiedzający strone nie widzieli(pliki css i js)</span>
+                                <pre>
+                                    <code class="language-html">&lt;head&gt;
+&lt;!-- ustawia kodowanie znakow na utf-8   --&gt;
+&lt;meta charset="utf-8"&gt;
+
+&lt;!-- ustawia tytuł wyswietlany na gorze przegladarki --&gt;
+&lt;title&gt;&lt;/title&gt;        
+&lt;/head&gt;                       </code>                        
+                                </pre>
+                            </li>
+                            <li class="letter">
+                                <h4>Sekcja Head</h4> <br>
+                                <span> Sekcja body w ktorej umieszczamy zawartosc strony internetowej.</span>
+                                <pre>
+                                    <code class="language-html">&lt;body&gt;&lt;/body&gt;</code>
+                                </pre>
+                            </li>
+                    </li>
+                </ol>
+                </ol>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- loader -->
+    <div class="loader">
+        <div class="circles">
+            <div></div>
+            <div></div>
+            <div></div>
+            <span></span>
+        </div>
+    </div>
+</body>
+
+</html>
