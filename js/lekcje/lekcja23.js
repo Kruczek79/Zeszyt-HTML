@@ -18,7 +18,7 @@ function generate() {
 	genControl();
 
 	//turn off generating button
-	document.querySelector(".btn").setAttribute("disabled", "");
+	document.querySelector("#gen").setAttribute("disabled", "");
 	document.querySelector("#dowod").value = dowod;
 }
 
