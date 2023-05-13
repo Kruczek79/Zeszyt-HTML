@@ -7,17 +7,25 @@
 }
 .btn {
 	width: fit-content;
-	height: 40px;
-	padding: 20px;
+	height: 45px;
+	padding-left: 20px;
+	padding-right: 20px;
 	font-size: 20px;
+	margin-left: 10px;
+	background-color: #fff;
 	border-radius: 12px;
-	text-align: center;
-	margin-left: 5px;
 	border: 1px solid black;
+	transition: all 0.5s ease;
 }
 .btn:hover {
-	background-color: #232323;
+	background-color: #292929;
 	color: white;
-	transition: all 0.5s ease;
 	cursor: pointer;
+	transition: all 0.5s ease;
+}
+.inputS {
+	width: fit-content;
+	padding: 10px;
+	font-size: 20px;
+	border-radius: 12px;
 }
