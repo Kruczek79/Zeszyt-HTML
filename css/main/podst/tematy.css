@@ -173,7 +173,49 @@ body.dark .react li:hover a {
 	color: #000;
 	transition: all 0.5s ease;
 }
-.react li:hover a {
+.cpp li:hover a {
 	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.cpp .title {
+	color: #578ad2;
+}
+body.dark .cpp li:hover {
+	background-color: #578ad2;
+	transition: all 0.5s ease;
+	cursor: pointer;
+	color: #000;
+}
+.cpp li:hover {
+	background-color: #578ad2;
+	transition: all 0.5s ease;
+	cursor: pointer;
+	color: #ffffff;
+}
+body.dark .cpp li:hover a {
+	color: #000;
+	transition: all 0.5s ease;
+}
+.cpp li:hover a {
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.ue .title {
+	color: #6c1ce3;
+}
+body.dark .ue li:hover {
+	background-color: #6c1ce3;
+	transition: all 0.5s ease;
+	cursor: pointer;
+	color: #000;
+}
+.ue li:hover {
+	background-color: #6c1ce3;
+	transition: all 0.5s ease;
+	cursor: pointer;
+	color: #ffffff;
+}
+body.dark .ue li:hover a {
+	color: #000;
 	transition: all 0.5s ease;
 }
