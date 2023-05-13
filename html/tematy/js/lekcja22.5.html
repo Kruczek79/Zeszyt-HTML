@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS lekcja 22</title>
+    <title>JS lekcja 19</title>
     <link rel="icon" href="../../../img/icon.png" type="image/x-icon">
     <!-- CSS -->
     <link rel="stylesheet" href="../../../css/main/main.css">
@@ -16,7 +16,7 @@
     <script defer src="../../../js/main/jquery.js"></script>
     <script defer src="../../../js/main/highlight.js"></script>
     <script defer src="../../../js/main/main.js"></script>
-    <script defer src="../../../js/lekcje/lekcja22.js"></script>
+    <script defer src="../../../js/lekcje/lekcja22.5.js"></script>
 
 </head>
 
@@ -77,33 +77,29 @@
                 <div></div>
             </div>
             <div class="note">
-                <h3 class="title">Temat: Algorytmy - pesel</h3>
+                <h3 class="title">Temat: Obiektowy JS - OOP</h3>
                 <span class="line"></span>
                 <div>
-                    <h3>Pesel validator:</h3>
-                    <form>
-                        <div class="wrapper">
-                            <input type="text" placeholder="wpisz pesel" id="pesel" autocomplete="off"
-                                pattern="^[0-9]{11}$" required class="input">
-                            <input type="submit" value="enter" class="btn" id="ok">
-                        </div>
-                    </form>
-                    <span class="dane"></span>
+                    <h3>Podaj dane:</h3>
+                    <form><label for="data">Podaj date uro:</label><input type="date" id="data" required class="inputS">
+                        <br><label for="plec">Podaj plec</label><select id="plec" class="inputS">
+                            <option value="1">Kobieta</option>
+                            <option value="2">Meszczyzna</option>
+                        </select><br><input type="submit" value="zatwierdz" class="btn" id="gen">
+                    </form><br><label for="peselGen">Pesel:</label><input id="peselGen" type="text"
+                        class="input"><button id="copy" class="btn">Copy to clipboard</button>
                 </div>
-
             </div>
-        </div>
-    </div>
 
-    <!-- loader -->
-    <div class="loader">
-        <div class="circles">
-            <div></div>
-            <div></div>
-            <div></div>
-            <span></span>
-        </div>
-    </div>
+            <!-- loader -->
+            <div class=" loader">
+                <div class="circles">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <span></span>
+                </div>
+            </div>
 </body>
 
 </html>
