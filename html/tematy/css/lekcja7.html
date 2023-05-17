@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pl-pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS lekcja 7</title>
+    <link rel="icon" href="../../../img/icon.png" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../../css/main/main.css">
+    <link rel="stylesheet" href="../../../css/main/icons/css/boxicons.min.css">
+    <link rel="stylesheet" href="../../../css/main/podst/tematy.css">
+    <link rel="stylesheet" href="../../../css/lekcje/css/lekcja7.css">
+    <!-- SCRIPTS -->
+    <script defer src="../../../js/main/jquery.js"></script>
+    <script defer src="../../../js/main/highlight.js"></script>
+    <script defer src="../../../js/main/main.js"></script>
+
+</head>
+
+<body class="dark">
+
+    <div id="container">
+        <div class="header"></div>
+
+        <div class="sidebar">
+            <div class="logo-content">
+                <div class="logo">Zeszyt HTML</div>
+            </div>
+            <i class='bx bx-menu' id="btn"></i>
+
+            <ul class="nav-list">
+                <li>
+                    <a href="../../../index.html">
+                        <i class='bx bxs-grid-alt'></i>
+                        <span class="link-name">Home</span>
+                    </a>
+                    <span class="tooltip">Home</span>
+                </li>
+                <li>
+                    <a href="../../Jezyki.html">
+                        <i class='bx bx-code-alt'></i>
+                        <span class="link-name">Jezyki Progr</span>
+                    </a>
+                    <span class="tooltip">Jezyki Progr</span>
+                </li>
+                <li>
+                    <a href="../../tematy.html">
+                        <i class='bx bxs-book'></i>
+                        <span class="link-name">Tematy</span>
+                    </a>
+                    <span class="tooltip">Tematy</span>
+                </li>
+                <li>
+                    <a href="../../plan.html">
+                        <i class='bx bx-calendar'></i>
+                        <span class="link-name">Plan Lekcji</span>
+                    </a>
+                    <span class="tooltip">Plan Lekcji</span>
+                </li>
+                <li class="mode">
+                    <div class="ms">
+                        <i class="bx bx-moon"></i>
+                    </div>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="topbar">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="note">
+                <h3 class="title">Temat: Transitions transform</h3>
+                <span class="line"></span>
+                <ol>
+                    <li>
+                        <h3>Transform</h3> <br>
+                        <span>Transform to wlasciwosc pozwalajaca na przerozne transformacje elementow</span>
+                        <ol>
+                            <li class="letter">
+                                <h4>Translate</h4> <br>
+                                <span>Translate sluzy do przesuwania elementow (przesuniecie x, przesuniecie y)</span>
+                                <pre><code class="language-css">div{
+    transform: translate(20px, 20px)
+}
+</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>Scale</h4> <br>
+                                <span>Scale sluzy do skalowania elementow </span>
+                                <pre><code class="language-css">div{
+    transform: scale(2)
+}
+</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>Rotate</h4> <br>
+                                <span>Rotate sluzy do obracania elementow </span>
+                                <pre><code class="language-css">div{
+    transform: roatate(40deg)
+}
+</code>
+</pre>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <h3>Transitions</h3> <br>
+                        <span>Transitions to sposob na uplynnienie zmiany wlasciwosci aby powstala taka jakby plynna
+                            animacja (co ma uplynnic, czas, rodzaj animacji)</span>
+                        <pre><code class="language-css">div{
+    transition: all 0.5s ease;
+}
+</code></pre>
+                    </li>
+                    <li>
+                        <h3>Przykladowe uzycie transform i transitions</h3>
+                        <ol>
+                            <li class="letter">
+                                <h4>Translate</h4> <br>
+                                <div class="box"></div>
+                                <div class="translate box2"></div>
+                            </li>
+                            <li class="letter">
+                                <h4>TranslateX</h4> <br>
+                                <div class="box"></div>
+                                <div class="translatex box2"></div>
+                            </li>
+                            <li class="letter">
+                                <h4>TranslateY</h4> <br>
+                                <div class="box"></div>
+                                <div class="translatey box2"></div>
+                            </li>
+                            <li class="letter">
+                                <h4>Rotate</h4> <br>
+                                <div class="box"></div>
+                                <div class="rotate box2"></div>
+                            </li>
+                            <li class="letter">
+                                <h4>RotateX</h4> <br>
+                                <div class="box"></div>
+                                <div class="rotatex box2"></div>
+                            </li>
+                            <li class="letter">
+                                <h4>RotateY</h4> <br>
+                                <div class="box"></div>
+                                <div class="rotatey box2"></div>
+                            </li>
+                            <li class="letter">
+                                <h4>RotateZ</h4> <br>
+                                <div class="box"></div>
+                                <div class="rotatez box2"></div>
+                            </li>
+                            <li class="letter">
+                                <h4>Scale</h4> <br>
+                                <div class="box"></div>
+                                <div class="scale box2"></div>
+                            </li>
+                            <li class="letter">
+                                <h4>ScaleX</h4> <br>
+                                <div class="box"></div>
+                                <div class="scalex box2"></div>
+                            </li>
+                            <li class="letter">
+                                <h4>ScaleY</h4> <br>
+                                <div class="box"></div>
+                                <div class="scaley box2"></div>
+                            </li>
+                            <li class="letter">
+                                <h4>Skew</h4> <br>
+                                <div class="box"></div>
+                                <div class="skew box2"></div>
+                            </li>
+                            <li class="letter">
+                                <h4>SkewX</h4> <br>
+                                <div class="box"></div>
+                                <div class="skewx box2"></div>
+                            </li>
+                            <li class="letter">
+                                <h4>SkewY</h4> <br>
+                                <div class="box"></div>
+                                <div class="skewy box2"></div>
+                            </li>
+                            <li class="letter">
+                                <h4>Translate3d</h4> <br>
+                                <div class="box"></div>
+                                <div class="translate3d box2"></div>
+                            </li>
+                            <li class="letter">
+                                <h4>Rotate3d</h4> <br>
+                                <div class="box"></div>
+                                <div class="rotate3d box2"></div>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- loader -->
+    <div class="loader">
+        <div class="circles">
+            <div></div>
+            <div></div>
+            <div></div>
+            <span></span>
+        </div>
+    </div>
+</body>
+
+</html>

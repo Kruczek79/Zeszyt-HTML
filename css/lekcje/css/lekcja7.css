@@ -1,0 +1,61 @@
+.box {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+}
+.box2 {
+	width: 100px;
+	height: 100px;
+	background-color: #9ceb09;
+	position: relative;
+	top: -100px;
+	transition: transform 2s ease;
+}
+.box2:hover {
+	opacity: 0.8;
+}
+.translate:hover {
+	transform: translate(40px, 40px);
+}
+.translatex:hover {
+	transform: translateX(40px);
+}
+.translatey:hover {
+	transform: translateY(40px);
+}
+.rotate:hover {
+	transform: rotate(40deg);
+}
+.rotatex:hover {
+	transform: rotateX(180deg);
+}
+.rotatey:hover {
+	transform: rotateY(180deg);
+}
+.rotatez:hover {
+	transform: rotateZ(180deg);
+}
+.scale:hover {
+	transform: scale(2);
+}
+.scalex:hover {
+	transform: scaleX(2);
+}
+.scaley:hover {
+	transform: scaleY(2);
+}
+.skew:hover {
+	transform: skew(30deg, 20deg);
+}
+.skewx:hover {
+	transform: skewX(-30deg);
+}
+.skewy:hover {
+	transform: skewY(-20deg);
+}
+.translate3d:hover {
+	transform: translate3d(20px, 0, 50px);
+}
+.rotate3d:hover {
+	transform: rotate3d(1, 1, 1, 30deg);
+}
