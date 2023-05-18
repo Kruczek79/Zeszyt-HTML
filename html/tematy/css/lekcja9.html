@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pl-pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS lekcja 9</title>
+    <link rel="icon" href="../../../img/icon.png" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../../css/main/main.css">
+    <link rel="stylesheet" href="../../../css/main/icons/css/boxicons.min.css">
+    <link rel="stylesheet" href="../../../css/main/podst/tematy.css">
+    <link rel="stylesheet" href="../../../css/lekcje/css/lekcja9.css">
+    <!-- SCRIPTS -->
+    <script defer src="../../../js/main/jquery.js"></script>
+    <script defer src="../../../js/main/highlight.js"></script>
+    <script defer src="../../../js/main/main.js"></script>
+
+</head>
+
+<body class="dark">
+
+    <div id="container">
+        <div class="header"></div>
+
+        <div class="sidebar">
+            <div class="logo-content">
+                <div class="logo">Zeszyt HTML</div>
+            </div>
+            <i class='bx bx-menu' id="btn"></i>
+
+            <ul class="nav-list">
+                <li>
+                    <a href="../../../index.html">
+                        <i class='bx bxs-grid-alt'></i>
+                        <span class="link-name">Home</span>
+                    </a>
+                    <span class="tooltip">Home</span>
+                </li>
+                <li>
+                    <a href="../../Jezyki.html">
+                        <i class='bx bx-code-alt'></i>
+                        <span class="link-name">Jezyki Progr</span>
+                    </a>
+                    <span class="tooltip">Jezyki Progr</span>
+                </li>
+                <li>
+                    <a href="../../tematy.html">
+                        <i class='bx bxs-book'></i>
+                        <span class="link-name">Tematy</span>
+                    </a>
+                    <span class="tooltip">Tematy</span>
+                </li>
+                <li>
+                    <a href="../../plan.html">
+                        <i class='bx bx-calendar'></i>
+                        <span class="link-name">Plan Lekcji</span>
+                    </a>
+                    <span class="tooltip">Plan Lekcji</span>
+                </li>
+                <li class="mode">
+                    <div class="ms">
+                        <i class="bx bx-moon"></i>
+                    </div>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="topbar">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="note">
+                <h3 class="title">Temat: Grid</h3>
+                <span class="line"></span>
+                <ol>
+                    <li>
+                        <h3>Grid</h3> <br>
+                        <span>Grid to sposob na rozmieszczenie elementow na stronie w siatce. <br> Jest bardzo podobny
+                            do
+                            flexboxa lecz jest troche bardziej skaplikowany <br>Definiujemy go przy uzyciu
+                            display:grid;</span>
+                        <pre><code class="language-css">.grid-container{
+    display:grid;
+}                 
+</code>
+</pre>
+                        <ol>
+                            <li class="letter">
+                                <h4>grid-template-columns</h4> <br>
+                                <span>Ustawia nam szerokosci kolumn w siatce (1kolumna, 2kolumna, 3kolumna, itd)</span>
+                                <pre><code class="language-css">.grid-box{
+    display:grid;
+    grid-template-columns: 100px, 100px, 100px;
+}                                        
+</code>
+</pre>
+                                <span>Funkcja repeat pozwala nam ustawienie tej samej wartosci dla x kolumn (x,
+                                    wartosc)</span>
+                                <pre><code class="language-css">.grid-box{
+    display:grid;
+    grid-template-columns: repeat(3, 100px);
+}                                        
+</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>grid-template-rows</h4> <br>
+                                <span>Ustawia nam szerokosci wierszy w siatce (1wiersz, 2wiersz, 3wiersz, itd)</span>
+                                <pre><code class="language-css">.grid-box{
+    display:grid;
+    grid-template-rows: 100px, 100px, 100px;
+}                                        
+</code>
+</pre>
+                                <span>Funkcja repeat pozwala nam ustawienie tej samej wartosci dla x wierszy (x,
+                                    wartosc)</span>
+                                <pre><code class="language-css">.grid-box{
+    display:grid;
+    grid-template-rows: repeat(3, 100px);
+}                                        
+</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>grid-auto-rows</h4> <br>
+                                <span>Ustawia nam szerokosci wierszy w siatce ktore nie dotycza
+                                    grid-template-rows</span>
+                                <pre><code class="language-css">.grid-box{
+    display:grid;
+    grid-auto-rows: 100px;
+}                                        
+</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>grid-auto-columns</h4> <br>
+                                <span>Ustawia nam szerokosci kolumn w siatce ktore nie dotycza
+                                    grid-template-columns</span>
+                                <pre><code class="language-css">.grid-box{
+    display:grid;
+    grid-auto-columns: 100px;
+}                                        
+</code>
+</pre>
+                                <span>Funkcja minmax pozwala nam ustawienie minimalnej wielkosci i maksymalnej
+                                    wielkosci (minimalna, maksymalna)</span>
+                                <pre><code class="language-css">.grid-box{
+    display:grid;
+    grid-auto-columns: minmax(200px, auto);
+}                                        
+</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>Gap</h4> <br>
+                                <span>Gap to odstep od elementow</span>
+                                <pre><code class="language-css">.grid-box{
+        display:grid;
+        gap: 10px;
+    }                                        
+</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>grid-template-areas</h4> <br>
+                                <span>grid-template-areas pozwala na ulozenie elementow jak sie chce</span>
+                                <pre><code class="language-css">.grid-box{
+        display:grid;
+        grid-template-areas: 
+        "header header" /*na gorze bedzie element o nazwie header */
+        "menu content"  /*z boku bedzie menu a obok content */
+        "menu footer"  /*na dole bedzie menu i stopka */
+    }
+    .grid-item1{
+        grid-area:header; /*nadanie nazw elementow grid */
+    }    
+    .grid-item2{
+        grid-area:menu;
+    } 
+    .grid-item3{
+        grid-area:content;
+    }      
+    .grid-item4{
+        grid-area:footer;
+    }                           
+</code>
+</pre>
+                                <div class="grid-container">
+                                    <div class="grid-item item-1">header</div>
+                                    <div class="grid-item item-2">menu</div>
+                                    <div class="grid-item item-3">content</div>
+                                    <div class="grid-item item-4">footer</div>
+
+                                </div>
+                            </li>
+                            <li class="letter">
+                                <h4>grid-column</h4> <br>
+                                <span>grid-column pozwala ustawic wielkosc elementu</span>
+                                <pre><code class="language-css">.grid-item{
+        grid-column: 1 / 4; /* od 1 kolumny do 4 kolumny */
+    }                                        
+</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>grid-row</h4> <br>
+                                <span>grid-row pozwala ustawic wielkosc elementu</span>
+                                <pre><code class="language-css">.grid-item{
+        grid-row: 1 / 4; /* od 1 rzedu do 4 rzedu */
+    }                                        
+</code>
+</pre>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- loader -->
+    <div class="loader">
+        <div class="circles">
+            <div></div>
+            <div></div>
+            <div></div>
+            <span></span>
+        </div>
+    </div>
+</body>
+
+</html>

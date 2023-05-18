@@ -1,0 +1,29 @@
+.grid-container {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	grid-auto-rows: minmax(100px, auto);
+	grid-template-areas:
+		"header content"
+		"menu content"
+		"menu footer";
+	gap: 10px;
+}
+.grid-item {
+	padding: 20px;
+}
+.item-1 {
+	background-color: #ef7f7f;
+	grid-area: header;
+}
+.item-2 {
+	background-color: #7f7fec;
+	grid-area: menu;
+}
+.item-3 {
+	background-color: #75b975;
+	grid-area: content;
+}
+.item-4 {
+	background-color: #f5f594;
+	grid-area: footer;
+}
