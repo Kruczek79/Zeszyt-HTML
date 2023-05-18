@@ -1,0 +1,57 @@
+.canvas {
+	width: 500px;
+	height: 500px;
+	background-color: #6ba4d6;
+}
+.ball {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: red;
+	position: relative;
+	left: 200px;
+	top: 100px;
+	animation: bounce 0.9s infinite;
+	z-index: 1;
+}
+.shadow {
+	width: 65px;
+	height: 10px;
+	background-color: rgba(8, 8, 8, 0.05);
+	border-radius: 50%;
+	position: relative;
+	top: 310px;
+	left: 195px;
+	animation: shrink 0.9s infinite;
+}
+.container {
+	width: 57px;
+	height: 50px;
+}
+@keyframes bounce {
+	10% {
+		width: 50px;
+		height: 50px;
+	}
+	30% {
+		width: 50px;
+		height: 40px;
+	}
+	50% {
+		width: 57px;
+		height: 30px;
+		transform: translateY(240px);
+	}
+	75% {
+		width: 57px;
+		height: 50px;
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+@keyframes shrink {
+	50% {
+		transform: scaleX(0.5);
+	}
+}
