@@ -77,7 +77,76 @@
             <div class="note">
                 <h3 class="title">Temat: Klonowanie obiektow - Wartosc a referencja</h3>
                 <span class="line"></span>
-                <ol></ol>
+                <ol>
+                    <li>
+                        <h3>Wartosc a referencja</h3> <br>
+                        <span>Jezeli jakies zmiennej przypisujemy wartosc prymitywna(nie obiekt) to przypisywana jest do
+                            niej wartosc nie referencja. <br>A jesli przypisujemy zmiennej wartosc
+                            nieprymitywna(obiekty, tablice) to przypisywana jest do niej referencja</span>
+                        <span>Referencja to odwolanie do tego samego miejsca w pamieci co zmienna do ktorej referujemy.
+                        </span>
+                        <pre>
+<code class="language-javascript">let a = 0;
+let b = a; //b = 0
+
+a = 1;
+b = 0; //b bedzie dalej 0 poniewaz a jest wartoscia prymitywna
+</code>
+</pre>
+                        <pre><code class="language-javascript">let a = {name: 'John'};
+let b = a; //b = {name: 'John'}
+a.name = "Bob"; //b = {name: "Bob"} poniewaz obiekt jest wartoscia nieprymitywna wiec b jest referencja do a
+    </code>
+    </pre>
+                    </li>
+                    <li>
+                        <h3>Klonowanie obiektow</h3> <br>
+                        <span>Aby uniknac sytulacji gdzie wystepuja niechciane referencje kozystamy z klonowania
+                            obiektow <br>Istnieja 3 rozne sposoby na to</span>
+                        <ol>
+                            <li class="letter">
+                                <h4>Kopia z uzyciem spread operator</h4>
+                                <span>Sluzy do kopiowania plytkiego(wiekszosc danych to wartosci prymitywne)</span>
+                                <pre>
+<code class="language-javascript">const John = {
+name: "John"
+}
+const Bob = {...John} //kopiuje wartosci prymitywne przez co niema referencji
+</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>Kopia z uzyciem JSON</h4>
+                                <span>Uzywamy gdy w obiekcie nie posiadamy metod(funkcji) oraz typow obiektow(np obiektu
+                                    typu date)</span>
+                                <pre>
+<code class="language-javascript">const John = {
+name: "John",
+skill: {name: "Fireball", level:5}
+}
+const Bob = JSON.parse(JSON.stringify(John)) 
+//zmienia obiekt john na jsonowy string a nastepnie zmienia spowrotem na obiekt js
+//(json nie posiada referencji wiec one w trakcie sie kasuja)
+
+                                        </code>
+                                    </pre>
+                            </li>
+                            <li class="letter">
+                                <h4>Kopia z uzyciem spread operator 2</h4>
+                                <pre>
+<code class="language-javascript">const John = {
+name: "John",
+skill: {name: "Fireball", level:5}
+}
+const Bob = {...John, skill:{name: John.skill.name, level: John.skill.level}}
+//kopiuje wartosci prymitywne przez co niema referencji
+
+</code>
+</pre>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
             </div>
         </div>
     </div>
