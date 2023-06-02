@@ -5,18 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS lekcja 36</title>
+    <title>JS lekcja 34</title>
     <link rel="icon" href="../../../img/icon.png" type="image/x-icon">
     <!-- CSS -->
     <link rel="stylesheet" href="../../../css/main/main.css">
     <link rel="stylesheet" href="../../../css/main/icons/css/boxicons.min.css">
-    <link rel="stylesheet" href="../../../css/lekcje/js/lekcja36.css">
-
+    <link rel="stylesheet" href="../../../css/main/podst/tematy.css">
     <!-- SCRIPTS -->
-    <script src="../../../js/main/jquery.js"></script>
+    <script defer src="../../../js/main/jquery.js"></script>
     <script defer src="../../../js/main/highlight.js"></script>
     <script defer src="../../../js/main/main.js"></script>
-    <script defer src="../../../js/lekcje/lekcja36.js"></script>
 
 </head>
 
@@ -77,18 +75,45 @@
                 <div></div>
             </div>
             <div class="note">
-                <h3 class="title">Temat: Funkcje liniowe</h3>
-                <form class="formularz">
-                    <div class="wrapper">
-                        <label for="f1">pierwsza funkcja</label>
-                        <input type="text" id="f1" class="input" placeholder="a*x+b">
-                    </div>
-                    <div class="wrapper">
-                        <label for="f2">druga funkcja</label>
-                        <input type="text" id="f2" class="input" placeholder="a*x+b">
-                    </div>
-                    <input type="submit" id="submit" class="btn">
-                </form>
+                <h3 class="title">Temat: JSON</h3>
+                <span class="line"></span>
+                <ol>
+                    <li>
+                        <h3>Co to JSON</h3><br>
+                        <span>JSON to javascript object notation <br>Sluzy do transportowania danych</span>
+                    </li>
+                    <li>
+                        <h3>Syntax Jsona</h3> <br>
+                        <span>JSON ma jeden glowny obiekt w ktorym przechowujemy inne obiekty, tablice, stringi i
+                            liczby</span>
+                        <pre>
+<code class="language-json">{
+    "string" : "makapaka",
+    "liczba" : 12,
+    "tablica" : [1,2,3,4],
+    "bool" : true,
+    "obiekt" : {}
+}
+</code>
+</pre>
+                    </li>
+                    <li>
+                        <h3>Parsowanie i zamienianie JSONa</h3><br>
+                        <span>Aby zamienic javascriptowy obiekt na obiekt jsona uzywamy funkcji
+                            JSON.stringify(obiekt) <br>Aby zamienic obiekt jsona spowrotem na obiekt javascriptowy to
+                            uzywamy funkcji JSON.parse("string jsona")</span>
+                        <pre>
+<code class="language-javascript">const obiekt = {
+    name: "makapaka",
+    age: 12    
+}
+const jsonString = JSON.stringify(obiekt) //'{"name":"makapaka","age":12}' (obiekt jsona);
+
+JSON.parse(jsonString); //{name: "makapaka",age: 12}(obiekt javascriptowy)
+</code>
+</pre>
+                    </li>
+                </ol>
             </div>
         </div>
     </div>

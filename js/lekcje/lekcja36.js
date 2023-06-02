@@ -6,25 +6,23 @@ form.addEventListener("submit", (event) => {
 	let f1Value = document.querySelector("#f1").value;
 	console.log(`Function1: ${f1Value}`);
 
-	let f1Sp = f1Value.split("");
+	let f1Sp = f1Value.trim().split("");
 	console.log(`Function1 Arr: ${f1Sp}`);
 
-	let indexM1 = f1Sp.indexOf("*");
+	let indexX1 = f1Sp.indexOf("x");
 
-	let a1 = f1Sp.slice(0, indexM1);
-	a1 = a1.join("");
+	let a1 = eval(f1Sp.slice(0, indexX1).join(""));
 	console.log(`Function1 a: ${a1}`);
 
 	let f2Value = document.querySelector("#f2").value;
 	console.log(`Function2: ${f2Value}`);
 
-	let f2Sp = f2Value.split("");
+	let f2Sp = f2Value.trim().split("");
 	console.log(`Function2 Arr: ${f2Sp}`);
 
-	let indexM2 = f2Sp.indexOf("*");
+	let indexX2 = f2Sp.indexOf("x");
 
-	let a2 = f2Sp.slice(0, indexM2);
-	a2 = a2.join("");
+	let a2 = eval(f2Sp.slice(0, indexX2).join(""));
 	console.log(`Function2 a: ${a2}`);
 
 	a1 === a2

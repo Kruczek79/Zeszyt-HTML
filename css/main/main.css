@@ -227,8 +227,8 @@ body {
 	border-radius: 20px;
 	transition: all 0.6s ease;
 	border-radius: 12px;
-	overflow: hidden scroll;
 	color: #000000;
+	overflow-y: scroll;
 	font-size: 25px;
 	margin-top: 20px;
 	margin-left: 104px;
@@ -236,7 +236,7 @@ body {
 }
 
 .topbar {
-	width: calc(100vw - 94px);
+	width: calc(100vw - 100px);
 	height: 30px;
 	background: #9b9b9b;
 	display: flex;

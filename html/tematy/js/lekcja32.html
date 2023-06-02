@@ -5,18 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS lekcja 36</title>
+    <title>JS lekcja 32</title>
     <link rel="icon" href="../../../img/icon.png" type="image/x-icon">
     <!-- CSS -->
     <link rel="stylesheet" href="../../../css/main/main.css">
     <link rel="stylesheet" href="../../../css/main/icons/css/boxicons.min.css">
-    <link rel="stylesheet" href="../../../css/lekcje/js/lekcja36.css">
-
+    <link rel="stylesheet" href="../../../css/main/podst/tematy.css">
     <!-- SCRIPTS -->
-    <script src="../../../js/main/jquery.js"></script>
+    <script defer src="../../../js/main/jquery.js"></script>
     <script defer src="../../../js/main/highlight.js"></script>
     <script defer src="../../../js/main/main.js"></script>
-    <script defer src="../../../js/lekcje/lekcja36.js"></script>
 
 </head>
 
@@ -77,18 +75,35 @@
                 <div></div>
             </div>
             <div class="note">
-                <h3 class="title">Temat: Funkcje liniowe</h3>
-                <form class="formularz">
-                    <div class="wrapper">
-                        <label for="f1">pierwsza funkcja</label>
-                        <input type="text" id="f1" class="input" placeholder="a*x+b">
-                    </div>
-                    <div class="wrapper">
-                        <label for="f2">druga funkcja</label>
-                        <input type="text" id="f2" class="input" placeholder="a*x+b">
-                    </div>
-                    <input type="submit" id="submit" class="btn">
-                </form>
+                <h3 class="title">Temat: Async i await</h3>
+                <span class="line"></span>
+                <ol>
+                    <li>
+                        <h3>Async await</h3> <br>
+                        <span>Async await to jeszcze lepsza pomoc przy promisach <br>Skraca nam pisanie .then</span>
+                        <pre>
+<code class="language-javascript">async function(){//oznaczamy funkcje przy pomocy slowa kluczowego async
+    await promise1(); //promise2 czeka az promise1 skonczy sie wykonywac
+    await promise2();    
+}
+</code>
+</pre>
+                        <pre>
+    <code class="language-javascript">promise1()
+    .then(()=>{
+        //kod
+    })
+    .then(()=>{
+        //kod
+    })
+    .then(()=>{
+        //kod
+    })
+    //to wykonuje to samo co z przy uzyciem async await
+    </code>
+    </pre>
+                    </li>
+                </ol>
             </div>
         </div>
     </div>

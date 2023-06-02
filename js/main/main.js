@@ -31,6 +31,13 @@ document.getElementById("btn").addEventListener("click", () => {
 		content.style.marginLeft = 104 + "px";
 	}
 });
+setInterval(() => {
+	if (content.offsetWidth < 1012) {
+		content.style.overflowX = "scroll";
+	} else {
+		content.style.overflowX = "hidden";
+	}
+}, 100);
 
 //switch theme
 let toggleswitch = document.querySelector(".toggle-switch");

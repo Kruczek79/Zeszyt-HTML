@@ -5,18 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS lekcja 36</title>
+    <title>JS lekcja 31</title>
     <link rel="icon" href="../../../img/icon.png" type="image/x-icon">
     <!-- CSS -->
     <link rel="stylesheet" href="../../../css/main/main.css">
     <link rel="stylesheet" href="../../../css/main/icons/css/boxicons.min.css">
-    <link rel="stylesheet" href="../../../css/lekcje/js/lekcja36.css">
-
+    <link rel="stylesheet" href="../../../css/main/podst/tematy.css">
     <!-- SCRIPTS -->
-    <script src="../../../js/main/jquery.js"></script>
+    <script defer src="../../../js/main/jquery.js"></script>
     <script defer src="../../../js/main/highlight.js"></script>
     <script defer src="../../../js/main/main.js"></script>
-    <script defer src="../../../js/lekcje/lekcja36.js"></script>
 
 </head>
 
@@ -77,18 +75,29 @@
                 <div></div>
             </div>
             <div class="note">
-                <h3 class="title">Temat: Funkcje liniowe</h3>
-                <form class="formularz">
-                    <div class="wrapper">
-                        <label for="f1">pierwsza funkcja</label>
-                        <input type="text" id="f1" class="input" placeholder="a*x+b">
-                    </div>
-                    <div class="wrapper">
-                        <label for="f2">druga funkcja</label>
-                        <input type="text" id="f2" class="input" placeholder="a*x+b">
-                    </div>
-                    <input type="submit" id="submit" class="btn">
-                </form>
+                <h3 class="title">Temat: Promisy</h3>
+                <span class="line"></span>
+                <ol>
+                    <li>
+                        <h3>Czym sa promisy</h3> <br>
+                        <span>Promisy to inny(lepszy, prostrzy) zapis callbackow. <br> Promise to obietnica ze cos
+                            zostanie
+                            wykonane. <br> Albo cos zostanie wykonane (resolve) albo niewykonane (reject)</span>
+                    </li>
+                    <pre>
+<code class="language-javascript">new Promise((resolve, reject)=>{ //po zakonczeniu timeouta wykona sie promise
+    setTimeout(()=>{
+        console.log("working..")
+        resolve();
+    },800)
+}).then(()=>{//to wykona sie po zakonczeniu promisa
+    //kod
+}).catch((err)=>{//to jest zlapanie i obsluga bledow
+
+})
+</code>
+</pre>
+                </ol>
             </div>
         </div>
     </div>

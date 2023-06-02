@@ -5,18 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS lekcja 36</title>
+    <title>React Lekcja 1</title>
     <link rel="icon" href="../../../img/icon.png" type="image/x-icon">
     <!-- CSS -->
     <link rel="stylesheet" href="../../../css/main/main.css">
     <link rel="stylesheet" href="../../../css/main/icons/css/boxicons.min.css">
-    <link rel="stylesheet" href="../../../css/lekcje/js/lekcja36.css">
-
+    <link rel="stylesheet" href="../../../css/main/podst/tematy.css">
     <!-- SCRIPTS -->
-    <script src="../../../js/main/jquery.js"></script>
+    <script defer src="../../../js/main/jquery.js"></script>
     <script defer src="../../../js/main/highlight.js"></script>
     <script defer src="../../../js/main/main.js"></script>
-    <script defer src="../../../js/lekcje/lekcja36.js"></script>
 
 </head>
 
@@ -77,18 +75,55 @@
                 <div></div>
             </div>
             <div class="note">
-                <h3 class="title">Temat: Funkcje liniowe</h3>
-                <form class="formularz">
-                    <div class="wrapper">
-                        <label for="f1">pierwsza funkcja</label>
-                        <input type="text" id="f1" class="input" placeholder="a*x+b">
-                    </div>
-                    <div class="wrapper">
-                        <label for="f2">druga funkcja</label>
-                        <input type="text" id="f2" class="input" placeholder="a*x+b">
-                    </div>
-                    <input type="submit" id="submit" class="btn">
-                </form>
+                <h3 class="title">Temat: React wprowadzenie</h3>
+                <span class="line"></span>
+                <ol>
+                    <li>
+                        <h3>Czym jest react</h3> <br>
+                        <span>React to rozbudowana javascriptowa biblioteka służąca do tworzenia interfejsów
+                            użytkownika. <br>Oparta jest na odizolowanych komponentach tworzacych cala aplikacje
+                            <br>Komponenty maja stan ktorym mozna zarzadzac <br>Uzywa sie w nim JSX czyli znacznikow
+                            html w javascripcie</span>
+                    </li>
+                    <li>
+                        <h3>Instalowanie reacta</h3> <br>
+                        <span>Aby kozystac z reacta trzeba go zainstalowac. <br>Istnieja 3 rozne sposoby na
+                            zainstalowanie reacta</span>
+                        <ol>
+                            <li class="letter">
+                                <h4>Create react app</h4> <br>
+                                <span>Instalujemy Node JS na komputerze oraz wpisujemy polececnie w wierszu
+                                    polecen: </span>
+                                <pre>
+<code>
+    npx create-react-app "nazwa projektu" //instaluje nam reacta i tworzy projekt
+</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>Vite</h4> <br>
+                                <span>Instalujemy Node JS na komputerze oraz wpisujemy polececnie w wierszu
+                                    polecen:</span>
+                                <pre>
+<code>
+    npm create vite@latest //i postepujemy dalej zgodnie z dalszymi instrukcjami
+</code>
+</pre>
+                            </li>
+                            <li class="letter">
+                                <h4>CDN</h4> <br>
+                                <span>Zalaczamy JS przez CDN(content delivery network) za pom znacznika script w
+                                    html</span>
+                                <pre>
+<code class="language-html">&lt;script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"&gt;&lt;/script&gt;
+&lt;script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"&gt;&lt;/script&gt;
+&lt;script src="https://unpkg.com/@babel/standalone/babel.min.js"&gt;&lt;/script&gt;
+</code>
+</pre>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
             </div>
         </div>
     </div>

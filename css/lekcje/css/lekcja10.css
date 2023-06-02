@@ -1,0 +1,29 @@
+/* * {
+	padding: 0;
+	margin: 0;
+} */
+[class*="col-"] {
+	width: 100%;
+}
+
+.left {
+	background-color: red;
+	float: left;
+}
+.right {
+	background-color: blue;
+	float: right;
+}
+.center {
+	background-color: green;
+	float: left;
+}
+
+@media only screen and (min-width: 768px) {
+	.col-3 {
+		width: 25%;
+	}
+	.col-6 {
+		width: 50%;
+	}
+}

@@ -5,18 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS lekcja 36</title>
+    <title>JS lekcja 30</title>
     <link rel="icon" href="../../../img/icon.png" type="image/x-icon">
     <!-- CSS -->
     <link rel="stylesheet" href="../../../css/main/main.css">
     <link rel="stylesheet" href="../../../css/main/icons/css/boxicons.min.css">
-    <link rel="stylesheet" href="../../../css/lekcje/js/lekcja36.css">
-
+    <link rel="stylesheet" href="../../../css/main/podst/tematy.css">
     <!-- SCRIPTS -->
-    <script src="../../../js/main/jquery.js"></script>
+    <script defer src="../../../js/main/jquery.js"></script>
     <script defer src="../../../js/main/highlight.js"></script>
     <script defer src="../../../js/main/main.js"></script>
-    <script defer src="../../../js/lekcje/lekcja36.js"></script>
 
 </head>
 
@@ -77,18 +75,37 @@
                 <div></div>
             </div>
             <div class="note">
-                <h3 class="title">Temat: Funkcje liniowe</h3>
-                <form class="formularz">
-                    <div class="wrapper">
-                        <label for="f1">pierwsza funkcja</label>
-                        <input type="text" id="f1" class="input" placeholder="a*x+b">
-                    </div>
-                    <div class="wrapper">
-                        <label for="f2">druga funkcja</label>
-                        <input type="text" id="f2" class="input" placeholder="a*x+b">
-                    </div>
-                    <input type="submit" id="submit" class="btn">
-                </form>
+                <h3 class="title">Temat: Callbacki</h3>
+                <span class="line"></span>
+                <ol>
+                    <li>
+                        <h3>Asynchronicznosc i synchronicznosc</h3> <br>
+                        <span>Domyslnie js wywoluje sie linijka po lini. <br>Jeżeli jakiś fragment wykonuje się dłużej
+                            (np. bardzo długa pętla czy chociażby czytanie zawartości pliku),<br> blokuje on wykonywanie
+                            dalszej części kodu, a użytkownik widzi to jako "przycięcie strony" <br> takie zachowanie
+                            nazywamy synchronicznym. <br>Asynchroniczne zachowanie to zachowanie pozwalajace na
+                            dzialanie czegos w tle <br>Asynchroniczność pozwala nam wykonywać kilka zadań równocześnie.
+                            Dzięki temu <br> możemy odpalić kilka zajmujących czas funkcjonalności na raz, a następnie
+                            zareagować na ich zakończenie. Przykladami asynchronicznych funkcji jest np (setInterval i
+                            setTimeout)</span>
+                    </li>
+                    <li>
+                        <h3>Czym jest Callback</h3> <br>
+                        <span>Callback to funkcja podana w parametrze drugiej funkcji <br>Ta funkcja w parametrze wywola
+                            sie po zakonczeniu pracy funkcji w ktorej zostala wywolana <br>Pozwala to na synchroniczne
+                            wywolywanie asynchronicznych funkcji</span>
+                        <pre>
+                                <code class="language-javascript">function myfunction(callback){
+//kod
+callback(); //wywola sie po zakonczeniu myFunction
+}
+function callback(){
+//kod
+}
+</code>
+</pre>
+                    </li>
+                </ol>
             </div>
         </div>
     </div>
